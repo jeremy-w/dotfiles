@@ -2,20 +2,26 @@
 # read by all interactive shells.
 
 export PATH="$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$HOME/urbi-root/bin/:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin"
-eval "$(rbenv init -)"
+if which rbenv; then
+  eval "$(rbenv init -)"
+fi
 
 alias ls='ls -FG'
 alias grep='grep --color'
 alias mq='hg -R $(hg root)/.hg/patches'
-alias git=hub
+if which hub; then
+  alias git=hub;
+fi
 
 alias lsregister='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister'
 alias xmlcat="sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g'"
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 # Load autojump
-if test -f `brew --prefix`/etc/autojump; then
-  source `brew --prefix`/etc/autojump
+if which brew; then
+  if test -f `brew --prefix`/etc/autojump; then
+    source `brew --prefix`/etc/autojump
+  fi
 fi
 
 # 10.6.4+ - generate symbols; assumes a kernel debug kit is mounted
