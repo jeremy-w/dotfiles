@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/private/etc/apache2/users'
+let g:netrw_dirhist_2='/private/etc/apache2'
+let g:netrw_dirhist_3='/Users/jeremy/.vim'
+let g:netrw_dirhist_4='/Users/jeremy/Downloads/Sorenson/Dummy Projects/NonPortableFlasherDemo'
+let g:netrw_dirhist_5='/Users/jeremy/Downloads/Sorenson/Dummy Projects/NonPortableFlasherDemo/NonPortableFlasherDemo'
+let g:netrw_dirhist_6='/usr/include/mach'
+let g:netrw_dirhist_7='/Users/jeremy/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/activeresource-2.3.14/lib/active_resource'
+let g:netrw_dirhist_8='/Users/jeremy/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/jekyll-0.11.0/bin'
