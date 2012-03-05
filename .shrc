@@ -2,14 +2,17 @@
 # read by all interactive shells.
 
 export PATH="$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$HOME/urbi-root/bin/:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin"
-if which rbenv; then
+has () {
+  which "$1" 2>&1 >/dev/null
+}
+if has rbenv; then
   eval "$(rbenv init -)"
 fi
 
 alias ls='ls -FG'
 alias grep='grep --color'
 alias mq='hg -R $(hg root)/.hg/patches'
-if which hub; then
+if has hub; then
   alias git=hub;
 fi
 
@@ -18,7 +21,7 @@ alias xmlcat="sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g'"
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 # Load autojump
-if which brew; then
+if has brew; then
   if test -f `brew --prefix`/etc/autojump; then
     source `brew --prefix`/etc/autojump
   fi
