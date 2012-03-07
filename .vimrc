@@ -20,7 +20,10 @@ set smartcase
 set incsearch
 set hlsearch
 
-syntax on
+syntax enable
+set background=dark
+"colorscheme solarized
+"let g:solarized_termtrans=0
 
 " Highlight characters in lines exceeding 80 chars
 if has("colorcolumn")
