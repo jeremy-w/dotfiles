@@ -32,6 +32,11 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+" .md should be Markdown, not Modula-2
+augroup filetype
+au! BufRead,BufNewFile *.md     set filetype=markdown
+augroup END
+
 " Disable arrow keys for navigation.
 noremap <Up> <nop>
 noremap <Down> <nop>
