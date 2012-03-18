@@ -63,3 +63,7 @@ cnoremap <M-B> <S-Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <M-F> <S-Right>
 cnoremap <Esc>f <S-Right>
+
+call pathogen#infect()
+" NOTE: You must run pathogen's Helptags command after loading new plugins
+" in order to generate vim help files for those plugins.
