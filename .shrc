@@ -1,7 +1,7 @@
 # Configuration file - shared by bash and zsh,
 # read by all interactive shells.
 
-export PATH="$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$HOME/urbi-root/bin/:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin"
+export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$HOME/urbi-root/bin/:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin:$HOME/storm-curr/bin/"
 has () {
   which "$1" 2>&1 >/dev/null
 }
