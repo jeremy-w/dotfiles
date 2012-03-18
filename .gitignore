@@ -17,7 +17,6 @@ build/
 *.dSYM/
 a.out
 tags
-*.sqlite3
 
 # Other source repository archive directories (protects when importing)
 .hg
@@ -32,7 +31,6 @@ CVS
 Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
-.netrwhist
 
 # Haskell
 *.hi
