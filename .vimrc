@@ -32,6 +32,17 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+"" Filetypes
+" LLVM assembly files
+augroup filetype
+au! BufRead,BufNewFile *.ll     set filetype=llvm
+augroup END
+
+" LLVM tablegen files
+augroup filetype
+au! BufRead,BufNewFile *.td     set filetype=tablegen
+augroup END
+
 " .md should be Markdown, not Modula-2
 augroup filetype
 au! BufRead,BufNewFile *.md     set filetype=markdown
