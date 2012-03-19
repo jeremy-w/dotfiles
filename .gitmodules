@@ -1,0 +1,21 @@
+[submodule ".vim/bundle/haskellmode"]
+	path = .vim/bundle/haskellmode
+	url = git://github.com/ehamberg/haskellmode-vim.git
+[submodule ".vim/bundle/html-template-syntax"]
+	path = .vim/bundle/html-template-syntax
+	url = git@github.com:pbrisbin/html-template-syntax.git
+[submodule ".vim/bundle/hoogle"]
+	path = .vim/bundle/hoogle
+	url = git://github.com/Twinside/vim-hoogle.git
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule ".vim/bundle/pdc"]
+	path = .vim/bundle/pdc
+	url = git://github.com/vim-scripts/pdc.vim.git
+[submodule ".vim/bundle/nerdcommentter"]
+	path = .vim/bundle/nerdcommentter
+	url = git://github.com/scrooloose/nerdcommenter
+[submodule ".vim/bundle/gist-vim"]
+	path = .vim/bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git

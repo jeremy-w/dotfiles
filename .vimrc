@@ -1,3 +1,7 @@
+call pathogen#infect()
+" NOTE: You must run pathogen's Helptags command after loading new plugins
+" in order to generate vim help files for those plugins.
+
 set nocompatible
 scriptencoding utf8
 set encoding=utf-8
@@ -64,6 +68,36 @@ cnoremap <Esc>b <S-Left>
 cnoremap <M-F> <S-Right>
 cnoremap <Esc>f <S-Right>
 
-call pathogen#infect()
-" NOTE: You must run pathogen's Helptags command after loading new plugins
-" in order to generate vim help files for those plugins.
+" see https://github.com/pbrisbin/vim-config/blob/master/vimrc
+" switch leader key to comma
+let mapleader = ','
+let maplocalleader = ','
+
+" haskellmode-vim needs these set as early as possible
+let g:haddock_browser = $BROWSER
+let g:haddock_indexfiledir = $HOME . '/.vim/'
+
+" commenter
+let NERDCreateDefaultMappings = 0
+let NERDCommentWholeLinesInVMode = 1
+
+let g:NERDCustomDelimiters = {
+    \ 'haskell': { 'left': '--' , 'right': '' },
+    \ 'hamlet' : { 'left': '\<!-- ', 'right': ' -->' },
+    \ 'cassius': { 'left': '/* ' , 'right': ' */' },
+    \ 'lucius' : { 'left': '/* ' , 'right': ' */' },
+    \ 'julius' : { 'left': '//' , 'right': '' }
+\ }
+
+" gist-vim
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    let g:gist_clip_command = 'pbcopy'
+  else
+    let g:gist_clip_command = 'xclip'
+  endif
+endif
