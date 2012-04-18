@@ -12,6 +12,7 @@ xcuserdata/
 
 # Generated files
 build/
+node_modules/
 *.[oa]
 *.pyc
 *.dSYM/
