@@ -52,6 +52,12 @@ augroup filetype
 au! BufRead,BufNewFile *.md     set filetype=markdown
 augroup END
 
+"" Code styles
+augroup style
+au! BufRead,BufNewFile {*.md,*markdown,*.htm,*.html,*.js,*.coffee}
+    \ set et ts=2 sw=2
+augroup END
+
 " Disable arrow keys for navigation.
 noremap <Up> <nop>
 noremap <Down> <nop>
