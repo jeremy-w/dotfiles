@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/VimClojure"]
+	path = .vim/bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure
+[submodule "vim-fugitive"]
+	path = vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
