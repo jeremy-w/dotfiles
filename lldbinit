@@ -1,0 +1,15 @@
+script print "(.lldbinit loaded)",
+settings append target.env-vars MallocStackLogging=1 MallocStackLoggingNoCompact=1 MallocScribble=1 MallocPreScribble=1
+settings append target.env-vars NSZombieEnabled=1 NSDebugEnabled=1
+
+## LLDB doesn't seem to support "future break".
+#script print "   Adding standard breakpoints."
+#breakpoint set -n objc_exception_throw
+#breakpoint set -n malloc_error_break
+#breakpoint set -n _NSLockError
+#breakpoint set -n NSKVODeallocateBreak
+#breakpoint set -n _NSFastEnumerationMutationHandler
+#breakpoint set -n malloc_printf
+#breakpoint set -n _NSAutoreleaseNoPool
+#breakpoint set -F -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:]
+#breakpoint set -n CGErrorBreakpoint

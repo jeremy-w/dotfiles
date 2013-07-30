@@ -1,0 +1,23 @@
+[color]
+	ui = true
+[user]
+	name = Jeremy W. Sherman
+	email = jeremyw.sherman@gmail.com
+[pack]
+	threads = 0
+[diff]
+	renamelimit = 0
+[github]
+	user = jeremy-w
+	token = 5f45f05510ca7db6d957a60de298ad1b
+[core]
+#	autocrlf = input
+  excludesfile = ~/.gitignore
+[rebase]
+	autosquash = true
+[push]
+	default = simple
+[branch]
+	autosetupmerge = true
+[ghi]
+	token = 4c1a173d34ce31bfcaadd62433c4a823936e8860

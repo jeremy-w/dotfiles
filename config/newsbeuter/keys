@@ -1,0 +1,11 @@
+## [KEYS] ##
+bind-key j down
+bind-key k up
+bind-key SPACE pagedown
+
+# think "mark" for bookmark
+bind-key ^M bookmark
+
+# this frees up ^B for pageup
+bind-key ^B pageup
+## [/KEYS] ##

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/jeremy/.macports/opt/local/var/macports/sources/rsync.macports.org/release/ports'
+let g:netrw_dirhist_2='/Users/jeremy/.macports/opt/local/var/macports/sources/rsync.macports.org/release/ports/databases'
+let g:netrw_dirhist_3='/Users/jeremy/Clark/Urbi/urbi-sdk-2.7.1'
+let g:netrw_dirhist_4='/Users/jeremy/Workpad/CommandScape/NoSuchUObjectReduction/message.uob'

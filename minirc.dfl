@@ -1,0 +1,8 @@
+# Machine-generated file - use setup menu in minicom to change parameters.
+pu lock             /usr/local/Cellar/minicom/2.4/var
+pu escape-key       Escape (Meta)
+pu rtscts           No
+pu tfcolor          GREEN
+pu sfcolor          BLACK
+pu sbcolor          BLUE
+pu localecho        Yes

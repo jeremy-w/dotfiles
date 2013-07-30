@@ -1,0 +1,11 @@
+## [FORMATS] ##
+#feedlist-format - default "%4i %n %11u %t"
+# tt-rss's first tag always seems to be the "set feed name" ~Name style :\
+#feedlist-format "%4i %n %11u %11T > %t"
+
+# articlelist-format default: "%4i %f %D %6L  %?T?|%-17T|  &?%t"
+articlelist-format "%4i %f %t %> %?T?[%T] &?| %D"
+
+#datetime-format - uses strftime format - default %b %d like "Jun 02"
+datetime-format "%a %d %b"
+## [/FORMATS] ##

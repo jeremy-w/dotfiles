@@ -1,0 +1,71 @@
+# [Automatic Reloading]
+auto-reload yes
+refresh-on-startup yes
+# suppress reload on launch when auto-reloading
+suppress-first-reload yes
+
+# [Bookmarking]
+#bookmark-cmd - path to command to execute on a bookmarked URL
+#bookmark-interactive - set "yes" if it is interactive; default "no"
+#bookmark-autopilot - set "yes" to skip confirming title/URL when possible
+
+#browser - default lynx
+browser "open %u"
+
+error-log "~/.newsbeuter/error.log"
+
+# If set, then "show-urls" will pipe the current article to a specific external tool instead of using the internal URL viewer. This can be used to integrate tools such as urlview. 
+#external-url-viewer 
+
+prepopulate-query-feeds yes
+
+save-path "~/Documents/Newsbeuter Saved Articles"
+
+# [Tiny Tiny RSS]
+urls-source "ttrss"
+ttrss-url "https://jeremywsherman.com/tt-rss"
+ttrss-login "jws"
+source ttrss-password
+ttrss-mode multi
+# Use lowercase flags to be quick and easy to type.
+ttrss-flag-publish "p"
+ttrss-flag-star "s"
+
+# Debugging via mitmproxy:
+#    mitmproxy -P "http://jeremywsherman.com/p/tt-rss" --replace "/~q/localhost/jeremywsherman.com"
+#    ttrss-url localhost:8080/p/tt-rss
+
+# [Notification]
+#notify-format "newsbeuter: finished reload, %f unread feeds (%n unread articles total)"
+#notify-program PATH ($1 is the notification message)
+#notify-screen yes/no (used with GNU screen; sends a private message)
+#notify-xterm yes/no (retitles xterm window)
+#notify-beep yes/no (beep on new articles)
+
+# load key bindings - in a separate file so I can play with them via
+# :source keys at runtime
+#source "keys"
+## [KEYS] ##
+bind-key j down
+bind-key k up
+bind-key SPACE pagedown
+
+# think "mark" for bookmark
+bind-key ^M bookmark
+
+# this frees up ^B for pageup
+bind-key ^B pageup
+## [/KEYS] ##
+
+# load formatting - in a separate file so I can play with them via
+# :source formats at runtime
+#source "formats"
+## [FORMATS] ##
+#feedlist-format - default "%4i %n %11u %t"
+
+# articlelist-format default: "%4i %f %D %6L  %?T?|%-17T|  &?%t"
+articlelist-format "%4i %f %t %> %?T?[%T] &?| %D"
+
+#datetime-format - uses strftime format - default %b %d like "Jun 02"
+datetime-format "%a %d %b"
+## [/FORMATS] ##

@@ -1,0 +1,35 @@
+VisualHostKey yes
+
+Host *
+  compression yes
+
+Host heroku.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_heroku
+
+Host silver.bnr
+  Port 9822
+  User jsherman
+
+Host github.com 207.97.227.239 204.232.175.90 192.30.252.0/22
+  User git
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_github
+
+# use id_bitbucket for bnrjeremy
+Host bitbucket.org
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_github
+
+Host dev.alchiba.com dev1.alchiba.com
+  IdentityFile ~/.ssh/jeremy@alchiba-id_rsa
+  Port 7822
+
+Host dev1.alchiba.bnr
+  IdentityFile ~/.ssh/jeremy@alchiba-id_rsa
+
+Host 192.241.212.91 gateway-arch jeremywsherman.com
+    Port 11522
+    User jeremy
+    IdentityFile ~/.ssh/id_rsa512
