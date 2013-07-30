@@ -10,3 +10,4 @@ chmod 0700 .ssh
 mv .ssh,config .ssh/config
 
 echo "Dotfiles installed."
+rm .install-dotfiles.sh
