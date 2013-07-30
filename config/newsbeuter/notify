@@ -1,0 +1,8 @@
+# [Notification]
+#notify-format "newsbeuter: finished reload, %f unread feeds (%n unread articles total)"
+#notify-program PATH ($1 is the notification message)
+#notify-screen yes/no (used with GNU screen; sends a private message)
+#notify-xterm yes/no (retitles xterm window)
+#notify-beep yes/no (beep on new articles)
+
+

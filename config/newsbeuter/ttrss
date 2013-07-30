@@ -1,0 +1,13 @@
+# [Tiny Tiny RSS]
+urls-source "ttrss"
+ttrss-url "https://jeremywsherman.com/tt-rss"
+ttrss-login "jws"
+ttrss-mode multi
+
+# Use lowercase flags to be quick and easy to type.
+ttrss-flag-publish "p"
+ttrss-flag-star "s"
+
+# The password file is excluded from revision control.
+# It's just a ttrss-password "PASSWORD" line.
+include "~/.config/newsbeuter/ttrss-password"
