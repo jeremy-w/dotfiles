@@ -41,6 +41,12 @@ set showmatch
 " Easily clear search highlighting when finished.
 nnoremap <leader><space> :nohlsearch<cr>
 
+nnoremap <leader>r :RainbowParenthesesToggle<cr>
+au VimEnter * RainbowParenthesesToggle
+au VimEnter * RainbowParenthesesLoadRound
+au VimEnter * RainbowParenthesesLoadSquare
+au VimEnter * RainbowParenthesesLoadBraces
+
 " ./tags uses a tags file in the file's directory.
 " tags alone uses a file in vim's cwd.
 "
