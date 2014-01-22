@@ -38,6 +38,16 @@ set smartcase
 set incsearch
 set hlsearch
 set showmatch
+
+" see https://github.com/pbrisbin/vim-config/blob/master/vimrc
+" switch leader key to comma
+let mapleader = ','
+let maplocalleader = ','
+
+"" leader shortcuts
+" select just-pasted region
+nnoremap <leader>v V`]
+
 " Easily clear search highlighting when finished.
 nnoremap <leader><space> :nohlsearch<cr>
 
@@ -46,6 +56,8 @@ au VimEnter * RainbowParenthesesToggle
 au VimEnter * RainbowParenthesesLoadRound
 au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
+
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 " ./tags uses a tags file in the file's directory.
 " tags alone uses a file in vim's cwd.
@@ -116,15 +128,6 @@ cnoremap <M-B> <S-Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <M-F> <S-Right>
 cnoremap <Esc>f <S-Right>
-
-" see https://github.com/pbrisbin/vim-config/blob/master/vimrc
-" switch leader key to comma
-let mapleader = ','
-let maplocalleader = ','
-
-"" leader shortcuts
-" select just-pasted region
-nnoremap <leader>v V`]
 
 " haskellmode-vim needs these set as early as possible
 let g:haddock_browser = $BROWSER
