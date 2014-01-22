@@ -49,3 +49,9 @@
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = git@github.com:rking/ag.vim.git
+[submodule "vim/bundle/screen"]
+	path = vim/bundle/screen
+	url = git@github.com:ervandew/screen.git
+[submodule "irb"]
+	path = irb
+	url = git://github.com/nviennot/irb-config.git

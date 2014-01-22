@@ -157,3 +157,10 @@ if has("unix")
     let g:gist_clip_command = 'xclip'
   endif
 endif
+
+" irbconfig setup - https://github.com/nviennot/irb-config
+command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
+map <Leader>c :ScreenShellVertical bundle exec rails c<CR>
+map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
+map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
+map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
