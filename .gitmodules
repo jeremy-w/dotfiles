@@ -55,3 +55,6 @@
 [submodule "irb"]
 	path = irb
 	url = git://github.com/nviennot/irb-config.git
+[submodule "vim/bundle/vim-compiler-go"]
+	path = vim/bundle/vim-compiler-go
+	url = git@github.com:rjohnsondev/vim-compiler-go.git
