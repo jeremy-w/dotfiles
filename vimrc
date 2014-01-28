@@ -51,7 +51,7 @@ nnoremap <leader>v V`]
 " Easily clear search highlighting when finished.
 nnoremap <leader><space> :nohlsearch<cr>
 
-nnoremap <leader>r :RainbowParenthesesToggle<cr>
+nnoremap <leader>R :RainbowParenthesesToggle<cr>
 au VimEnter * RainbowParenthesesToggle
 au VimEnter * RainbowParenthesesLoadRound
 au VimEnter * RainbowParenthesesLoadSquare
@@ -132,6 +132,9 @@ cnoremap <Esc>f <S-Right>
 " haskellmode-vim needs these set as early as possible
 let g:haddock_browser = $BROWSER
 let g:haddock_indexfiledir = $HOME . '/.vim/'
+
+" vim-compiler-go
+let g:golang_goroot = $GOROOT
 
 " commenter
 let NERDCreateDefaultMappings = 0
