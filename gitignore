@@ -45,3 +45,17 @@ cabal-dev
 dist
 .static-cache
 static/tmp
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
