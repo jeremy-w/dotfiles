@@ -67,3 +67,6 @@
 [submodule "vim/bundle/dash.vim"]
 	path = vim/bundle/dash.vim
 	url = git@github.com:rizzatti/dash.vim.git
+[submodule "vim/bundle/vim-easymotion"]
+	path = vim/bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
