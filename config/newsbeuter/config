@@ -18,7 +18,8 @@ save-path "~/Documents/Newsbeuter Saved Articles"
 # separate file lets you :source $FILE at runtime to try new things
 include "~/.config/newsbeuter/formats"
 include "~/.config/newsbeuter/keys"
-include "~/.config/newsbeuter/ttrss"
+# simpler not to use ttrss - didn't like any of the iOS apps, anyway
+#include "~/.config/newsbeuter/ttrss"
 include "~/.config/newsbeuter/notify"
 
 # [Bookmarking]
