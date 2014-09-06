@@ -133,8 +133,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="638.030517578125"
-         height="226.66401672363281"
+         width="16"
+         height="16"
          rx="0"
          ry="0" />
       <eventcontext
@@ -333,7 +333,7 @@
        gradientdrag="1"
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
-       style="fill:black;fill-opacity:1;stroke:none;font-family:Sans;font-style:normal;font-weight:normal;font-size:30px;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;text-align:center"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Menlo;font-style:normal;font-weight:normal;font-size:4px;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;text-align:center;-inkscape-font-specification:Menlo"
        selcue="1"
        align_mode="0" />
     <eventcontext
@@ -553,7 +553,7 @@
        state="2"
        x="0"
        y="0"
-       w="369"
+       w="378"
        h="432" />
     <group
        id="filtereffects"
@@ -590,12 +590,12 @@
        panel_ratio="100"
        panel_mode="1"
        panel_wrap="0"
-       align-to="0"
+       align-to="4"
        state="2"
        x="0"
        y="0"
        w="279"
-       h="432" />
+       h="397" />
     <group
        id="xml"
        x="68"
@@ -660,17 +660,17 @@
        h="397">
       <group
          id="exportarea"
-         value="selection" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="77" />
+         value="87.19000244140625" />
     </group>
     <group
        id="save_as"
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/Users/jeremy/Documents/Talks/HTTPForCocoaHeads"
+       path="/Users/jeremy/Documents/Blog"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -720,7 +720,7 @@
        state="2"
        x="0"
        y="0"
-       w="329"
+       w="378"
        h="265" />
     <group
        id="aboutextensions" />
@@ -1068,12 +1068,12 @@
      org.inkscape.effect.filter.drop-shadow.__live_effect__="0" />
   <group
      id="desktop"
-     style="fill:#9d9795;fill-opacity:1;stroke:#9d9795;stroke-opacity:1;opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;text-align:start;-inkscape-font-specification:Avenir Ultra-Bold;font-family:Avenir;font-weight:800;font-style:normal;font-stretch:normal;font-variant:normal;font-size:70px;writing-mode:lr;line-height:125%;stroke-dashoffset:0">
+     style="fill:#6c71c4;fill-opacity:1;stroke:none;stroke-opacity:1;opacity:0.35741445;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;text-align:start;-inkscape-font-specification:Avenir Ultra-Bold;font-family:Avenir;font-weight:800;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22px;writing-mode:lr;line-height:125%;stroke-dashoffset:0">
     <group
-       width="1419"
-       height="856"
-       x="1"
-       y="0"
+       width="872"
+       height="703"
+       x="151"
+       y="103"
        fullscreen="0"
        id="geometry"
        maximized="0" />
