@@ -40,6 +40,8 @@ Backup[ ]of[ ]*.numbers/
 .emacs.desktop.lock
 
 # Haskell
+.cabal-sandbox/
+cabal.sandbox.config
 *.hi
 cabal-dev
 dist

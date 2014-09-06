@@ -10,10 +10,13 @@ convert=
 extdiff=
 graphlog=
 patchbomb=
+# Record functions like git add -p, and is also used by qrecord with MQ.
 record=
 #MacOSXKeychain=/Library/Python/2.5/site-packages/hgext/hgkeychain.py
 hgext.mq=
 color=
+# hg shelve is like git stash.
+shelve=
 
 [diff]
 git=True

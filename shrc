@@ -23,10 +23,15 @@ alias mq='hg -R $(hg root)/.hg/patches'
 if has hub; then
   eval "$(hub alias -s)"
 fi
+alias sr='git svn rebase'
+alias sd='git svn dcommit'
 
 alias lsregister='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister'
 alias xmlcat="sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g'"
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+
+alias rdrconf='{ xcodebuild -version; echo; sw_vers; }'
+alias swfconf='{ xcodebuild -version; echo; sw_vers; echo; xcrun swift --version; }'
 
 # Load autojump
 if has brew; then
@@ -68,3 +73,4 @@ export EDITOR="/usr/bin/vim"
 
 export GOPATH="$HOME/usr/share/go"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"

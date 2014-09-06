@@ -39,6 +39,11 @@ set incsearch
 set hlsearch
 set showmatch
 
+" From More Instantly Better VIM 2013 by Damian Conway
+" http://youtu.be/aHm36-na4-4?t=9m55s
+nnoremap ; :
+"nnoremap : ;  " if you still want access to the ; command
+
 " see https://github.com/pbrisbin/vim-config/blob/master/vimrc
 " switch leader key to comma
 let mapleader = ','

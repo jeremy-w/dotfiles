@@ -2,6 +2,12 @@ script print "(.lldbinit loaded)",
 settings append target.env-vars MallocStackLogging=1 MallocStackLoggingNoCompact=1 MallocScribble=1 MallocPreScribble=1
 settings append target.env-vars NSZombieEnabled=1 NSDebugEnabled=1
 
+# Facebook's Chisel library is a collection of helpful extra commands for
+# iOS development.
+#
+# `brew install chisel`, or grab it from https://github.com/facebook/chisel.
+command script import /usr/local/opt/chisel/libexec/fblldb.py
+
 ## LLDB doesn't seem to support "future break".
 #script print "   Adding standard breakpoints."
 #breakpoint set -n objc_exception_throw
@@ -13,3 +19,4 @@ settings append target.env-vars NSZombieEnabled=1 NSDebugEnabled=1
 #breakpoint set -n _NSAutoreleaseNoPool
 #breakpoint set -F -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:]
 #breakpoint set -n CGErrorBreakpoint
+#breakpoint set -n _CFPropertyListMissingSemicolon
