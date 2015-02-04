@@ -40,4 +40,11 @@
 	 "</refentrytitle>" \n
 	 "<manvolnum>" - (or (read-string "manvolnum: " nil nil "2") "2")
 	 "</manvolnum>" \n
-  >"</citerefentry>"\n)
+  "</citerefentry>"\n)
+(define-skeleton jws-skel-bullet-list
+  "Builds a bulleted <itemizedlist>."
+  nil
+  \n
+  "<itemizedlist>" \n
+  ("paragraph body: " "<listitem><para>" \n str \n "</para></listitem>") \n
+  "</itemizedlist>" \n)
