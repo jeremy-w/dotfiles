@@ -16,7 +16,7 @@
 [rebase]
 	autosquash = true
 [push]
-	default = simple
+	default = current
 [branch]
 	autosetupmerge = true
 [ghi]
