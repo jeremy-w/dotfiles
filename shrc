@@ -64,9 +64,25 @@ export LESS="-R"
 export SGML_CATALOG_FILES="${HOME}/share/sgml/docbook/4.2/catalog:/opt/macports/share/OpenSP/catalog:/opt/macports/share/sgml/iso8879/catalog:/opt/macports/share/sgml/openjade/catalog"
 #export SGML_CATALOG_FILES="/opt/macports/openjade/dsssl/catalog:/usr/local/dbtools/dtd3.1/docbook.cat:/usr/local/dbtools/docbook-dsssl/catalog"
 
+if has fswatch; then
+    bnr_docbook_watch () {
+        dir="$1"
+        fswatch --include='Chapter.xml' --print0 "../$dir/Chapter.xml" \
+        | xargs -0 -n 1 -I {} make chapter dir="$dir"
+    }
+fi
+
+## Workaround for Yosemite bug
+yosemite_reset_dialog_height() {
+    for k in NSNavPanelExpandedSizeFor{Open,Save}Mode; do
+        defaults delete -app "$1" "$k"
+    done
+}
+
 export IRTRANS_ROOT="$HOME/Clark/Urbi/irtrans/src/urbi"
 export CSZW="$HOME/Clark/ZWave/MJC Framework Mods/deviceplugins/ZWave"
 export IOS="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/"
+export OSX="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/"
 
 export LANG="en_US.UTF-8" LC_CTYPE="UTF-8"
 export EDITOR="/usr/bin/vim"
