@@ -35,8 +35,8 @@ alias swfconf='{ xcodebuild -version; echo; sw_vers; echo; xcrun swift --version
 
 # Load autojump
 if has brew; then
-  if test -f `brew --prefix`/etc/autojump; then
-    source `brew --prefix`/etc/autojump
+  if test -s `brew --prefix`/etc/autojump.sh; then
+    source `brew --prefix`/etc/autojump.sh
   fi
 fi
 
