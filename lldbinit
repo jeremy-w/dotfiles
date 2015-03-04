@@ -20,3 +20,5 @@ command script import /usr/local/opt/chisel/libexec/fblldb.py
 #breakpoint set -F -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:]
 #breakpoint set -n CGErrorBreakpoint
 #breakpoint set -n _CFPropertyListMissingSemicolon
+#breakpoint set -n _NSAlertWarnUnsafeBackgroundThreadUsage
+#breakpoint set -n _AssertAutolayoutOnMainThreadOnly
