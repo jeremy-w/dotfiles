@@ -1,9 +1,9 @@
 # Configuration file - shared by bash and zsh,
 # read by all interactive shells.
 PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$HOME/urbi-root/bin:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin:$HOME/storm-curr/bin:$HOME/.rbenv/versions/1.9.2-p290/bin:/Library/Frameworks/Mono.framework/Commands"
+export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin:"
+export MONO_PATH="/Library/Frameworks/Mono.framework/Commands"
 export NODE_PATH="/usr/local/lib/node_modules"
-export USR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/
 has () {
   which "$1" 2>&1 >/dev/null
 }
@@ -80,9 +80,6 @@ yosemite_reset_dialog_height() {
 }
 
 export IRTRANS_ROOT="$HOME/Clark/Urbi/irtrans/src/urbi"
-export CSZW="$HOME/Clark/ZWave/MJC Framework Mods/deviceplugins/ZWave"
-export IOS="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/"
-export OSX="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/"
 
 export LANG="en_US.UTF-8" LC_CTYPE="UTF-8"
 export EDITOR="/usr/bin/vim"
