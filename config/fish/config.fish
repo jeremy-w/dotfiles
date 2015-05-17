@@ -11,7 +11,7 @@ setenv EDITOR "/usr/bin/vim"
 
 function wants_path -a path
     if not test -d "$path"
-        echo "$_: refusing to add non-existent directory to PATH: $path" >/dev/stderr
+        echo "$_: refusing to add non-existent directory to PATH: $path" >&2
     end
     begin
         not contains "$path" $PATH
