@@ -39,7 +39,8 @@ end
 # Append funky paths where OS X hides things.
 # LaunchServices happens to contain `lsregister`, which can be useful.
 # NOTE: Used to be a /Developer/usr/sbin, but no more as of Xcode 6.3.1.
-set -l paths_to_append /usr/libexec /Developer/usr/bin \
+# Appending /Developer/usr/bin was messing up xcrun starting with Xcode 7.
+set -l paths_to_append /usr/libexec \
     "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support"
 for path in $paths_to_append
     if wants_path "$path"
