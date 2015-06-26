@@ -1,3 +1,6 @@
+" system() doesn't like fish shell, it seems.
+" https://stackoverflow.com/questions/12230290/vim-errors-on-vim-startup-when-run-in-fish-shell
+set shell=/bin/bash
 call pathogen#infect()
 " NOTE: You must run pathogen's Helptags command after loading new plugins
 " in order to generate vim help files for those plugins.
