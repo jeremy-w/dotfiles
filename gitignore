@@ -21,9 +21,6 @@ a.out
 tags
 *.bundle
 
-# CocoaPods
-Pods/Manifest.lock
-
 # Other source repository archive directories (protects when importing)
 .hg
 .svn
