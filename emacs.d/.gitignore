@@ -20,6 +20,12 @@ build/
 # Emacs url buffering
 url/
 
+# Compiled emacs lisp files
+*.elc
+
+eshell/history
+swank/
+
 # Other source repository archive directories (protects when importing)
 .hg
 .svn

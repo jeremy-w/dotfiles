@@ -58,10 +58,10 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
 ;; SLIME
-(add-to-list 'load-path "~/.emacs.d/slime/")
-(setq inferior-lisp-program "/opt/local/bin/sbcl")
-(require 'slime)
-(slime-setup '(slime-fancy))
+;; (add-to-list 'load-path "~/.emacs.d/slime/")
+;; (setq inferior-lisp-program "/opt/local/bin/sbcl")
+;; (require 'slime)
+;; (slime-setup '(slime-fancy))
 
 ;; Proof General - generic front-end for interactive theorem provers
 ;; (load-file "~/.emacs.d/ProofGeneral/generic/proof-site.el")
