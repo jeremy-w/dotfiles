@@ -12,7 +12,7 @@ for file in dotfiles/*; do
     echo "$0: error: $target: directory exists - skipping" 1>&2
     error_count=`expr $error_count + 1`
   else
-    if ln -s "$file" "$target"; then
+    if ln -s "$PWD/$file" "$target"; then
     else
         error_count=`expr $error_count + 1`
     fi
