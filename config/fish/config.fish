@@ -27,7 +27,8 @@ end
 # See: http://coldwa.st/e/blog/2013-08-20-Cabal-sandbox.html
 #
 # Prefix /usr/local/{,s}bin so that Homebrew's stuff takes precedence.
-set -l paths_to_prepend "$HOME/usr/bin" "$HOME/.cabal/bin" /usr/local/{,s}bin
+set -l paths_to_prepend "$HOME/usr/bin" "$HOME/.cabal/bin" /usr/local/{,s}bin \
+    "$HOME/Applications/Racket*/bin"
 # For sanity, ensure we include standard paths.
 set -l paths_to_prepend $paths_to_prepend {/usr,}/bin {/usr,}/sbin /opt/X11/bin
 for path in $paths_to_prepend[-1..1]
