@@ -7,9 +7,6 @@
 [submodule "vim/bundle/hoogle"]
 	path = vim/bundle/hoogle
 	url = git://github.com/Twinside/vim-hoogle.git
-[submodule "vim/bundle/pdc"]
-	path = vim/bundle/pdc
-	url = git://github.com/vim-scripts/pdcvim.git
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git://github.com/mattn/gist-vim.git
