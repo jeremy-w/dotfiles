@@ -3,7 +3,7 @@ function dh --description 'Like dirh but with relative numbering to assist movin
     set -l countdown (count $dirprev)
     for dir in $dirprev
         echo "$countdown $dir"
-        set -l countdown (math "1 +" $countdown)
+        set -l countdown (math $countdown "- 1")
     end
 
     set_color $fish_color_history_current
