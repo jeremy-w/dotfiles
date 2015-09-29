@@ -167,3 +167,6 @@ bindkey ' ' magic-space
 
 # End runtime profiling.
 # setopt nopromptsubst noxtrace
+
+# added by travis gem
+[ -f /Users/jeremy/.travis/travis.sh ] && source /Users/jeremy/.travis/travis.sh

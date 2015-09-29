@@ -21,3 +21,6 @@ maybe_shopt globstar
 # not on my path when it runs
 export PATH="/usr/local/bin:$PATH"
 . "$HOME/.shrc"
+
+# added by travis gem
+[ -f /Users/jeremy/.travis/travis.sh ] && source /Users/jeremy/.travis/travis.sh
