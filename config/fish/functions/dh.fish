@@ -11,7 +11,7 @@ function dh --description 'Like dirh but with relative numbering to assist movin
     set_color normal
 
     set -l countup 1
-    for dir in $dirnext
+    for dir in $dirnext[-1..1]
         echo "$countup $dir"
         set -l countup (math "1 +" $countup)
     end
