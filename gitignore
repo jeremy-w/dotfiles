@@ -28,8 +28,6 @@ CVS
 
 # automatic backup files
 *~.nib
-*.swp
-*~
 \.\#*
 \#*\#
 *(Autosaved).*
@@ -38,6 +36,14 @@ Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
 .emacs.desktop
 .emacs.desktop.lock
+# vim
+# foo.md starts with .foo.md.swp and decrements to .foo.md.saa
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
 
 # Haskell
 .cabal-sandbox/
