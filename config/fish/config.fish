@@ -114,6 +114,16 @@ for godir in "$GOPATH/bin" /usr/local/opt/go/libexec/bin
     end
 end
 
+### SCALA ###
+set -l scalaenv_shims "$HOME/.scalaenv/shims"
+if wants_path $scalaenv_shims
+    set PATH $scalaenv_shims $PATH
+end
+
+set -x SCALAENV_SHELL fish
+scalaenv rehash ^/dev/null
+
+
 ## COMMANDS ##
 # autojump adds a `j` command for jumping to a directory.
 # It hooks into directory changes to create a weighted list of directories
