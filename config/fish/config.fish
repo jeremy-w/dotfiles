@@ -129,3 +129,10 @@ scalaenv rehash ^/dev/null
 # It hooks into directory changes to create a weighted list of directories
 # for use in selecting which directory to jump to.
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+# OPAM configuration
+# OPAM's variables stuff breaks PATH, which is fun:
+#     PATH=/Users/jeremy/.opam/system/bin:/Users/jeremy/.pyenv/shims /Users/jeremy/.rbenv/shims
+# Note the : alongside the other array bits.
+# It makes this mistake several times over.
+#. /Users/jeremy/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
