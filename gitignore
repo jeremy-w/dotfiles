@@ -67,3 +67,6 @@ static/tmp
 # Maven
 log/
 target/
+
+# Idris
+*.ibc
