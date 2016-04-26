@@ -138,3 +138,9 @@ scalaenv rehash ^/dev/null
 # Note the : alongside the other array bits.
 # It makes this mistake several times over.
 #. /Users/jeremy/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+
+
+## SYSTEM PREFERENCES ##
+# Prevent `--` from turning into an en-dash, while still leaving smart quotes
+# enabled. <URL:http://mjtsai.com/blog/2016/04/25/outsmarting-the-smart-dash/>
+[ -x (which defaults) ]; and defaults write -g NSAutomaticDashSubstitutionEnabled 0
