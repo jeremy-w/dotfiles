@@ -74,6 +74,7 @@ if type rbenv >/dev/null ^/dev/null
 end
 
 ### PYTHON ###
+function jws_pyenv_init
 # Let pyenv work its PATH magic.
 # py3.3+ has pyvenv baked in to replace virtualenv.
 # py3.4+ has pip baked in.
@@ -92,10 +93,11 @@ end
 #
 # See: http://www.chriskrycho.com/2015/a-modern-python-development-toolchain.html
 #
-# Sourcing it lets it automatically de/active the appropriate virtualenv
+# Sourcing it lets it automatically de/activate the appropriate virtualenv
 # when you enter a directory hierarchy.
 if type pyenv-virtualenv-init >/dev/null ^/dev/null
     source (pyenv virtualenv-init -|psub)
+end
 end
 
 ### NODE ###
