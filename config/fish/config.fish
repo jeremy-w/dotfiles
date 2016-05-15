@@ -57,16 +57,15 @@ if type rbenv >/dev/null ^/dev/null
     # Actually, rbenv init doesn't handle fish.
     # Let's do it manually.
     set PATH "$HOME/.rbenv/shims" $PATH
+    setenv RBENV_SHELL fish
     rbenv rehash ^/dev/null
     function rbenv
         set -l command $argv[1]
-        if test (count $argv) -gt 1
-            set argv $argv[2..-1]
-        end
+        set -e argv[1]
 
         switch "$command"
             case rehash shell
-                eval (rbenv "sh-$command" $argv)
+                . (rbenv "sh-$command" $argv | psub)
             case '*'
                 command rbenv "$command" $argv
         end
