@@ -46,6 +46,7 @@ Session.vim
 *~
 
 # Haskell
+.stack-work/
 .cabal-sandbox/
 cabal.sandbox.config
 *.hi
