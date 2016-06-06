@@ -30,7 +30,7 @@ end
 #
 # Prefix /usr/local/{,s}bin so that Homebrew's stuff takes precedence.
 set -l paths_to_prepend "$HOME/usr/bin" "$HOME/Library/Haskell/bin" \
-    /usr/local/{,s}bin "$HOME/Applications/Racket*/bin"
+    /usr/local/{,s}bin
 # For sanity, ensure we include standard paths.
 set -l paths_to_prepend $paths_to_prepend {/usr,}/bin {/usr,}/sbin /opt/X11/bin
 for path in $paths_to_prepend[-1..1]
