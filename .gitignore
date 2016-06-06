@@ -1,0 +1,6 @@
+# Only has filechooser state, which doesn't need syncing:
+config/gtk-2.0/
+
+# Should maybe not have gone with Vundle over Pathogen.
+# Oh well. Ignore these rather than submoduling them:
+vim/bundle/
