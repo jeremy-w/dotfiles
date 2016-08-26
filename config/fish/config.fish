@@ -124,6 +124,12 @@ end
 set -x SCALAENV_SHELL fish
 scalaenv rehash ^/dev/null
 
+### RUST ###
+set -l rust_cargo_bin "$HOME/.cargo/bin"
+if wants_path $rust_cargo_bin
+    set PATH $rust_cargo_bin $PATH
+end
+
 
 ## COMMANDS ##
 # autojump adds a `j` command for jumping to a directory.
