@@ -169,7 +169,7 @@
       <eventcontext
          id="arc"
          style="fill:red;"
-         end="180.00000265910896"
+         end="180"
          start="0"
          usecurrent="1"
          open="1" />
@@ -178,7 +178,7 @@
          magnitude="3"
          style="fill:yellow;"
          usecurrent="1"
-         proportion="0.49645439301202682"
+         proportion="0.496454"
          rounded="0"
          randomized="0"
          isflatsided="1" />
@@ -195,7 +195,7 @@
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
       <eventcontext
          id="pencil"
-         tolerance="4.0"
+         tolerance="4"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="0"
@@ -220,7 +220,9 @@
        tracebackground="0"
        usepressure="1"
        usetilt="0"
-       keep_selected="1">
+       keep_selected="1"
+       tremor="0"
+       wiggle="0">
       <group
          id="preset">
         <group
@@ -312,7 +314,7 @@
        mass="0.02"
        drag="1"
        angle="30"
-       width="0.15"
+       width="1"
        thinning="0.1"
        flatness="0.0"
        cap_rounding="1.4"
@@ -326,7 +328,8 @@
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
        unitid="3"
-       show_bbox="1" />
+       show_bbox="1"
+       unit="px" />
     <eventcontext
        id="text"
        usecurrent="0"
@@ -373,6 +376,8 @@
        doo="1" />
     <eventcontext
        id="spray"
+       selcue="1"
+       gradientdrag="0"
        usepressure="1"
        width="15"
        population="70"
@@ -386,6 +391,11 @@
        selcue="1"
        newgradient="2"
        newfillorstroke="1" />
+    <eventcontext
+       id="mesh"
+       selcue="1"
+       mesh_rows="1"
+       mesh_cols="1" />
     <eventcontext
        id="zoom"
        selcue="1"
@@ -411,7 +421,12 @@
        style="fill:#a0a0a0;stroke:none;"
        usecurrent="1"
        offset="0"
-       offsetunits="pt" />
+       offsetunits="pt"
+       threshold="5" />
+    <group
+       id="measure"
+       fontsize="10"
+       unit="px" />
   </group>
   <group
      id="palette">
@@ -538,7 +553,8 @@
        panel_mode="1"
        panel_ratio="100"
        panel_wrap="0"
-       palette="Inkscape default" />
+       palette="Inkscape default"
+       panel_border="0" />
   </group>
   <group
      id="dialogs">
@@ -685,7 +701,10 @@
     <group
        id="import"
        enable_preview="1"
-       path="/Users/jeremy/BNR/CaptionCall/icons/" />
+       path="/Users/jeremy/Dropbox (Personal)/Katelyn and Jeremy Shared/HOUSE/PropertyInfo/"
+       ask="1"
+       link="link"
+       scale="optimizeSpeed" />
     <group
        id="debug"
        redirect="0" />
@@ -735,9 +754,12 @@
        panel_wrap="0"
        x="0"
        y="0"
-       w="262"
-       h="688"
-       state="2" />
+       w="224"
+       h="154"
+       state="2"
+       panel_border="0"
+       visible="1"
+       placement="1" />
     <group
        id="extensioneditor" />
     <group
@@ -767,19 +789,8 @@
        on-blur="0.50"
        animate-time="100" />
     <group
-       id="livepatheffect"
-       panel_size="1"
-       panel_ratio="100"
-       panel_mode="1"
-       panel_wrap="0"
-       state="2"
-       x="0"
-       y="0"
+       h="239"
        w="360"
-       h="239" />
-    <group
-       h="509"
-       w="401"
        y="0"
        x="0"
        state="2"
@@ -787,7 +798,18 @@
        panel_mode="1"
        panel_ratio="100"
        panel_size="1"
-       id="documentmetadata" />
+       id="livepatheffect" />
+    <group
+       id="documentmetadata"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       state="2"
+       x="0"
+       y="0"
+       w="401"
+       h="509" />
   </group>
   <group
      id="printing">
@@ -799,6 +821,9 @@
   </group>
   <group
      id="options">
+    <group
+       id="renderingcache"
+       size="64" />
     <group
        id="useoldpdfexporter"
        value="0" />
@@ -832,6 +857,9 @@
     <group
        id="dragtolerance"
        value="4.0" />
+    <group
+       id="grabsize"
+       value="3" />
     <group
        id="displayprofile"
        enable="0"
@@ -906,9 +934,6 @@
        id="simplifythreshold"
        value="0.002" />
     <group
-       id="bitmapoversample"
-       value="1" />
-    <group
        id="bitmapeditor"
        value="0"
        choices="gimp,krita,gpaint,kolourpaint,mtpaint,cinepaint" />
@@ -926,6 +951,9 @@
     <group
        id="dialogsskiptaskbar"
        value="1" />
+    <group
+       id="defaultwindowsize"
+       value="2" />
     <group
        id="arenatilescachesize"
        value="8192" />
@@ -1005,8 +1033,24 @@
        minimumexponent="-8"
        inlineattrs="0"
        indent="2"
-       allowrelativecoordinates="1"
-       forcerepeatcommands="0" />
+       pathstring_format="2"
+       forcerepeatcommands="0"
+       incorrect_attributes_warn="1"
+       incorrect_attributes_remove="0"
+       incorrect_style_properties_warn="1"
+       incorrect_style_properties_remove="0"
+       style_defaults_warn="1"
+       style_defaults_remove="0"
+       check_on_reading="0"
+       check_on_editing="0"
+       check_on_writing="0"
+       allowrelativecoordinates="1" />
+    <group
+       id="externalresources">
+      <group
+         id="xml"
+         allow_net_access="0" />
+    </group>
     <group
        id="forkgradientvectors"
        value="1" />
@@ -1048,11 +1092,16 @@
     <group
        id="workarounds"
        colorsontop="0"
-       floatallowed="0"
-       partialdynamic="0" />
+       partialdynamic="0"
+       floatallowed="0" />
     <group
-       id="threading"
-       numthreads="1" />
+       value="1"
+       id="bitmapoversample" />
+    <group
+       numthreads="1"
+       id="threading" />
+    <group
+       id="rendering" />
   </group>
   <group
      id="extensions"
@@ -1076,7 +1125,7 @@
        y="103"
        fullscreen="0"
        id="geometry"
-       maximized="0" />
+       maximized="1" />
     <group
        id="XYfront" />
     <group
@@ -1165,19 +1214,6 @@
     </group>
   </group>
   <group
-     id="whiteboard">
-    <group
-       id="server"
-       name="jabber.org"
-       port="5222"
-       username=""
-       ssl="0" />
-    <group
-       id="room"
-       name="inkboard"
-       server="gristle.org" />
-  </group>
-  <group
      id="debug">
     <group
        id="latency"
@@ -1186,4 +1222,17 @@
   <group
      id="ui"
      language="" />
+  <group
+     id="whiteboard">
+    <group
+       ssl="0"
+       username=""
+       port="5222"
+       name="jabber.org"
+       id="server" />
+    <group
+       server="gristle.org"
+       name="inkboard"
+       id="room" />
+  </group>
 </inkscape>
