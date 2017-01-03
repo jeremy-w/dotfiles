@@ -10,7 +10,7 @@ shopt -s cdable_vars extglob nocaseglob nocasematch
 can_shopt=$(shopt)
 maybe_shopt() {
     if [[ shopt =~ "$1" ]]; then
-        shopt -s autocd
+        shopt -s $1
     fi
 }
 maybe_shopt autocd
