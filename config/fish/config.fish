@@ -74,29 +74,29 @@ end
 
 ### PYTHON ###
 function jws_pyenv_init
-# Let pyenv work its PATH magic.
-# py3.3+ has pyvenv baked in to replace virtualenv.
-# py3.4+ has pip baked in.
-if type pyenv >/dev/null ^/dev/null
-    # `pyenv init` prefixes with `status --is-interactive; and`, but I think
-    # you'd want the correct environment even in non-interactive shells, no?
-    # fishism: psub: does process substitution by using a named pipe.
-    source (pyenv init -|psub)
-end
+    # Let pyenv work its PATH magic.
+    # py3.3+ has pyvenv baked in to replace virtualenv.
+    # py3.4+ has pip baked in.
+    if type pyenv >/dev/null ^/dev/null
+        # `pyenv init` prefixes with `status --is-interactive; and`, but I think
+        # you'd want the correct environment even in non-interactive shells, no?
+        # fishism: psub: does process substitution by using a named pipe.
+        source (pyenv init -|psub)
+    end
 
-# Use pyenv-virtualenv to allow pyenv to treat a venv as a python version.
-# This allows sharing configuration across projects.
-#
-# Invoke as: pyenv virtualenv $PYTHON_VERSION $NEW_VENV_DIRECTORY_NAME
-# The venvs live in ~/.pyenv/versions/$NEW_VENV_DIRECTORY_NAME.
-#
-# See: http://www.chriskrycho.com/2015/a-modern-python-development-toolchain.html
-#
-# Sourcing it lets it automatically de/activate the appropriate virtualenv
-# when you enter a directory hierarchy.
-if type pyenv-virtualenv-init >/dev/null ^/dev/null
-    source (pyenv virtualenv-init -|psub)
-end
+    # Use pyenv-virtualenv to allow pyenv to treat a venv as a python version.
+    # This allows sharing configuration across projects.
+    #
+    # Invoke as: pyenv virtualenv $PYTHON_VERSION $NEW_VENV_DIRECTORY_NAME
+    # The venvs live in ~/.pyenv/versions/$NEW_VENV_DIRECTORY_NAME.
+    #
+    # See: http://www.chriskrycho.com/2015/a-modern-python-development-toolchain.html
+    #
+    # Sourcing it lets it automatically de/activate the appropriate virtualenv
+    # when you enter a directory hierarchy.
+    if type pyenv-virtualenv-init >/dev/null ^/dev/null
+        source (pyenv virtualenv-init -|psub)
+    end
 end
 
 ### NODE ###
