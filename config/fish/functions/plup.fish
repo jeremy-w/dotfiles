@@ -1,7 +1,7 @@
 function plup --description 'Searches for words in all configured Plover dictionaries.'
 	set -l base "$HOME/Library/Application Support/plover"
 	set -l config "$base/plover.cfg"
-    set -l dict_files (awk 'BEGIN{FS=" = "} /^dictionary_file/{print($2)}' $config)
+    set -l dict_files (awk 'BEGIN{FS=" = "} /^dictionary_file/{ path = $2; sub(/^~/, "'$HOME'", path); print(path);}' $config)
 
     # Recent Plover builds use a path relative to $config, at least for
     # sibling files.
