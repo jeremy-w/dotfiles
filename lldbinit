@@ -1,24 +1,35 @@
 script print "(.lldbinit loaded)",
-settings append target.env-vars MallocStackLogging=1 MallocStackLoggingNoCompact=1 MallocScribble=1 MallocPreScribble=1
-settings append target.env-vars NSZombieEnabled=1 NSDebugEnabled=1
+# Malloc logging lets us get info on the history of an address.
+# This mostly slows stuff down for no gain in Swift-land, though.
+#settings append target.env-vars MallocStackLogging=1 MallocStackLoggingNoCompact=1 MallocScribble=1 MallocPreScribble=1
+
+# This can mask some crashes and frustrates memory use tracking.
+# Flip on in build settings if you want it.
+#settings append target.env-vars NSZombieEnabled=1
+
+# Activate alerts.
+settings append target.env-vars NSDebugEnabled=1
+
+# Ensure CoreData guards its concurrency rules.
+settings append target.run-args -com.apple.CoreData.ConcurrencyDebug 1
 
 # Facebook's Chisel library is a collection of helpful extra commands for
-# iOS development.
+# iOS development. I never really got to like them much, though.
 #
 # `brew install chisel`, or grab it from https://github.com/facebook/chisel.
-command script import /usr/local/opt/chisel/libexec/fblldb.py
+#command script import /usr/local/opt/chisel/libexec/fblldb.py
 
-## LLDB doesn't seem to support "future break".
-#script print "   Adding standard breakpoints."
-#breakpoint set -n objc_exception_throw
-#breakpoint set -n malloc_error_break
-#breakpoint set -n _NSLockError
-#breakpoint set -n NSKVODeallocateBreak
-#breakpoint set -n _NSFastEnumerationMutationHandler
-#breakpoint set -n malloc_printf
-#breakpoint set -n _NSAutoreleaseNoPool
-#breakpoint set -F -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:]
-#breakpoint set -n CGErrorBreakpoint
-#breakpoint set -n _CFPropertyListMissingSemicolon
-#breakpoint set -n _NSAlertWarnUnsafeBackgroundThreadUsage
-#breakpoint set -n _AssertAutolayoutOnMainThreadOnly
+## LLDB finally gained the ability to manage "future break"!
+script print "   Adding standard breakpoints."
+#breakpoint set -n objc_exception_throw  # often want to flip this off, honestly
+breakpoint set -n malloc_error_break
+breakpoint set -n _NSLockError
+breakpoint set -n NSKVODeallocateBreak
+breakpoint set -n _NSFastEnumerationMutationHandler
+breakpoint set -n malloc_printf
+breakpoint set -n _NSAutoreleaseNoPool
+breakpoint set -F -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:]
+breakpoint set -n CGErrorBreakpoint
+breakpoint set -n _CFPropertyListMissingSemicolon
+breakpoint set -n _NSAlertWarnUnsafeBackgroundThreadUsage
+breakpoint set -n _AssertAutolayoutOnMainThreadOnly
