@@ -6,6 +6,9 @@ setenv EDITOR "/usr/bin/vim"
 
 source ~/.config/fish/fish_git_prompt_colors.fish
 
+setenv HOMEBREW_NO_AUTO_UPDATE 1
+setenv LC_ALL "en_US.UTF-8"
+
 ## PATH MANAGEMENT ##
 # fish_user_paths is automatically prepended to PATH and can be universal.
 # We won't manage it here, since the idea is the user edits it themselves
