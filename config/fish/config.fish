@@ -38,7 +38,7 @@ set -l paths_to_prepend "$HOME/usr/bin" "$HOME/Library/Haskell/bin" \
 set -l paths_to_prepend $paths_to_prepend {/usr,}/bin {/usr,}/sbin /opt/X11/bin
 for path in $paths_to_prepend[-1..1]
     if wants_path "$path"
-        setenv PATH "$path" $PATH
+        set -gx PATH "$path" $PATH
     end
 end
 
@@ -50,7 +50,7 @@ set -l paths_to_append /usr/libexec \
     "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support"
 for path in $paths_to_append
     if wants_path "$path"
-        setenv PATH $PATH "$path"
+        set -gx PATH $PATH "$path"
     end
 end
 
