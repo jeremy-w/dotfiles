@@ -9,11 +9,11 @@
 *.perspectivev3
 *.pbxuser
 xcuserdata/
-project.xcworkspace
 
 # Generated files
 build/
 node_modules/
+bower_components/
 *.[oa]
 *.pyc
 *.dSYM/
