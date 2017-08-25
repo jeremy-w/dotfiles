@@ -1,0 +1,23 @@
+p.utilization_prompt {
+    display: none;
+}
+
+/* WORKAROUND: PINSTRIPES EVERYWHERE
+ * See demo codepen: https://codepen.io/jws/pen/QgbpVN
+ */
+tr {
+    background-attachment: scroll !important;
+}
+
+.result-current {
+    background-attachment: scroll !important;
+}
+
+.result-needs-confirmation {
+    background-attachment: scroll !important;
+}
+
+.result-current.result-needs-confirmation {
+    background-attachment: scroll !important;
+}
+/* END WORKAROUND: PINSTRIPES EVERYWHERE */
