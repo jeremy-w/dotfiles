@@ -59,13 +59,17 @@ nnoremap <leader>v V`]
 " Easily clear search highlighting when finished.
 nnoremap <leader><space> :nohlsearch<cr>
 
-nnoremap <leader>R :RainbowParenthesesToggle<cr>
-au VimEnter * RainbowParenthesesToggle
-au VimEnter * RainbowParenthesesLoadRound
-au VimEnter * RainbowParenthesesLoadSquare
-au VimEnter * RainbowParenthesesLoadBraces
+if exists(":RainbowParenthesesToggle")
+    nnoremap <leader>R :RainbowParenthesesToggle<cr>
+    au VimEnter * RainbowParenthesesToggle
+    au VimEnter * RainbowParenthesesLoadRound
+    au VimEnter * RainbowParenthesesLoadSquare
+    au VimEnter * RainbowParenthesesLoadBraces
+endif
 
-nnoremap <leader>n :NERDTreeToggle<cr>
+if exists(":NERDTreeToggle")
+    nnoremap <leader>n :NERDTreeToggle<cr>
+endif
 
 " ./tags uses a tags file in the file's directory.
 " tags alone uses a file in vim's cwd.
