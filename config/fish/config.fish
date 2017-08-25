@@ -14,8 +14,9 @@ setenv LC_ALL "en_US.UTF-8"
 # We won't manage it here, since the idea is the user edits it themselves
 # as desired for that specific machine.
 
+set -l wants_path_verbose 0
 function wants_path -a path
-    if not test -d "$path"
+    if not test -d "$path" -a wants_path_verbose -eq 1
         echo "wants_path: skipped absent directory: $path" >&2
     end
     begin
