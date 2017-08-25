@@ -54,14 +54,6 @@ for path in $paths_to_append
     end
 end
 
-### COMMAND CORRECTION ###
-# Install with `brew install thefuck`.
-# Uses heuristics based on error messages to correct commands and rerun them.
-# Think: "Did you mean: (correct command here)"
-if type thefuck >/dev/null ^/dev/null
-    eval (thefuck --alias again | tr '\n' ';')
-end
-
 
 ### RUBY ###
 # Let rbenv work its PATH magic.
