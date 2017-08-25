@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Copy this up a directory, then run it.
 warn_count=0
 error_count=0
