@@ -2,6 +2,14 @@ VisualHostKey yes
 
 Host *
   compression yes
+  # Mitigation for CVE-0216-0778.
+  # Server-side roaming was never implemented anyway.
+  # See: http://undeadly.org/cgi?action=article&sid=20160114142733
+  UseRoaming no
+  # macOS Sierra/10.2 or later only:
+  # Let ssh-agent remember keys on macOS Sierra 10.12+.
+  UseKeychain yes
+  AddKeysToAgent yes
 
 Host heroku.com
   PreferredAuthentications publickey
@@ -14,6 +22,10 @@ Host silver.bnr
 Host github.com 207.97.227.239 204.232.175.90 192.30.252.0/22
   User git
   Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_github
+
+Host gitlab.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_github
 
@@ -31,5 +43,16 @@ Host dev1.alchiba.bnr
 
 Host 192.241.212.91 gateway-arch jeremywsherman.com
     Port 11522
+    IdentityFile ~/.ssh/id_rsa512
+
+# shermans.me NAS
+Host metropolis.local shermans.me
+    Port 11522
     User jeremy
+    PreferredAuthentications publickey,password
+    # Enable agent forwarding so we can ssh root@127.0.0.1 without a problem
+    ForwardAgent yes
+    IdentityFile ~/.ssh/id_rsa512
+
+Host gitlab.corp.apple.com
     IdentityFile ~/.ssh/id_rsa512
