@@ -16,7 +16,7 @@ setenv LC_ALL "en_US.UTF-8"
 
 function wants_path -a path
     if not test -d "$path"
-        echo "$_: refusing to add non-existent directory to PATH: $path" >&2
+        echo "wants_path: skipped absent directory: $path" >&2
     end
     begin
         not contains "$path" $PATH
@@ -65,7 +65,7 @@ end
 
 ### RUBY ###
 # Let rbenv work its PATH magic.
-if type rbenv >/dev/null ^/dev/null
+if which rbenv>/dev/null ^/dev/null
     # Actually, rbenv init doesn't handle fish.
     # Let's do it manually.
     set PATH "$HOME/.rbenv/shims" $PATH
@@ -89,7 +89,7 @@ function jws_pyenv_init
     # Let pyenv work its PATH magic.
     # py3.3+ has pyvenv baked in to replace virtualenv.
     # py3.4+ has pip baked in.
-    if type pyenv >/dev/null ^/dev/null
+    if which pyenv >/dev/null ^/dev/null
         # `pyenv init` prefixes with `status --is-interactive; and`, but I think
         # you'd want the correct environment even in non-interactive shells, no?
         # fishism: psub: does process substitution by using a named pipe.
@@ -106,7 +106,7 @@ function jws_pyenv_init
     #
     # Sourcing it lets it automatically de/activate the appropriate virtualenv
     # when you enter a directory hierarchy.
-    if type pyenv-virtualenv-init >/dev/null ^/dev/null
+    if which pyenv-virtualenv-init >/dev/null ^/dev/null
         source (pyenv virtualenv-init -|psub)
     end
 end
@@ -120,26 +120,32 @@ end
 setenv PERL_CPANM_OPT "--local-lib=~/perl5"
 
 ### GO ###
-setenv GOPATH "$HOME/usr/share/go"
-for godir in "$GOPATH/bin" /usr/local/opt/go/libexec/bin
-    if wants_path "$godir"
-        set PATH $PATH "$godir"
+if which go >/dev/null ^/dev/null
+    setenv GOPATH "$HOME/usr/share/go"
+    for godir in "$GOPATH/bin" /usr/local/opt/go/libexec/bin
+        if wants_path "$godir"
+            set PATH $PATH "$godir"
+        end
     end
 end
 
 ### SCALA ###
-set -l scalaenv_shims "$HOME/.scalaenv/shims"
-if wants_path $scalaenv_shims
-    set PATH $scalaenv_shims $PATH
+if which scalaenv >/dev/null ^/dev/null
+    set -l scalaenv_shims "$HOME/.scalaenv/shims"
+    if wants_path $scalaenv_shims
+        set PATH $scalaenv_shims $PATH
+    end
+
+    set -x SCALAENV_SHELL fish
+    scalaenv rehash ^/dev/null
 end
 
-set -x SCALAENV_SHELL fish
-scalaenv rehash ^/dev/null
-
 ### RUST ###
-set -l rust_cargo_bin "$HOME/.cargo/bin"
-if wants_path $rust_cargo_bin
-    set PATH $rust_cargo_bin $PATH
+if which cargo >/dev/null ^/dev/null
+    set -l rust_cargo_bin "$HOME/.cargo/bin"
+    if wants_path $rust_cargo_bin
+        set PATH $rust_cargo_bin $PATH
+    end
 end
 
 
