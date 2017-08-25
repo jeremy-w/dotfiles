@@ -59,13 +59,17 @@ nnoremap <leader>v V`]
 " Easily clear search highlighting when finished.
 nnoremap <leader><space> :nohlsearch<cr>
 
-nnoremap <leader>R :RainbowParenthesesToggle<cr>
-au VimEnter * RainbowParenthesesToggle
-au VimEnter * RainbowParenthesesLoadRound
-au VimEnter * RainbowParenthesesLoadSquare
-au VimEnter * RainbowParenthesesLoadBraces
+if exists(":RainbowParenthesesToggle")
+    nnoremap <leader>R :RainbowParenthesesToggle<cr>
+    au VimEnter * RainbowParenthesesToggle
+    au VimEnter * RainbowParenthesesLoadRound
+    au VimEnter * RainbowParenthesesLoadSquare
+    au VimEnter * RainbowParenthesesLoadBraces
+endif
 
-nnoremap <leader>n :NERDTreeToggle<cr>
+if exists(":NERDTreeToggle")
+    nnoremap <leader>n :NERDTreeToggle<cr>
+endif
 
 " ./tags uses a tags file in the file's directory.
 " tags alone uses a file in vim's cwd.
@@ -168,10 +172,3 @@ if has("unix")
     let g:gist_clip_command = 'xclip'
   endif
 endif
-
-" irbconfig setup - https://github.com/nviennot/irb-config
-command -nargs=? -complete=shellcmd W  :w | :call ScreenShellSend("load '".@%."';")
-map <Leader>c :ScreenShellVertical bundle exec rails c<CR>
-map <Leader>r :w<CR> :call ScreenShellSend("rspec ".@% . ':' . line('.'))<CR>
-map <Leader>e :w<CR> :call ScreenShellSend("cucumber --format=pretty ".@% . ':' . line('.'))<CR>
-map <Leader>b :w<CR> :call ScreenShellSend("break ".@% . ':' . line('.'))<CR>
