@@ -4,6 +4,7 @@ warn_count=0
 error_count=0
 for file in dotfiles/*; do
   name="`basename $file`"
+  # TODO: If name starts with underscore, log and skip!
   target=".$name"
   # Avoid putting a directory link inside an extant directory.
   if test -L "$target"; then

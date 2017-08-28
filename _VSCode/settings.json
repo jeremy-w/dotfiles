@@ -1,0 +1,43 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "diffEditor.renderSideBySide": false,
+    "editor.find.autoFindInSelection": true,
+    "editor.fontFamily": "Verdana, 'Go Regular', InputSans, Georgia, proportional",
+    "editor.fontSize": 16,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "editor.scrollBeyondLastLine": false,
+    "editor.renderLineHighlight": "all",
+    "editor.renderControlCharacters": true,
+    "editor.minimap.renderCharacters": false,
+    "files.insertFinalNewline": true,
+    "javascript.implicitProjectConfig.checkJs": true,
+    "todohighlight.keywords": [
+        "TODO:",
+        "FIXME:",
+        "HACK:",
+        "XXX:",
+        "???:",
+        "!!!:",
+        "PERF:"
+    ],
+    "editor.showFoldingControls": "always",
+    "search.useIgnoreFilesByDefault": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true,
+        "**/build": true
+    },
+    "files.associations": {
+        "*.install": "php",
+        "*.module": "php",
+        "*.inc": "php",
+        "*.info": "ini",
+        "*.test": "php",
+        "*.theme": "php"
+    },
+    "window.restoreWindows": "all",
+    "window.restoreFullscreen": true
+}
