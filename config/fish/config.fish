@@ -133,7 +133,8 @@ if which scalaenv >/dev/null ^/dev/null
 end
 
 ### RUST ###
-if which cargo >/dev/null ^/dev/null
+# rust-up actually installs cargo into the directory we're looking for.
+if which cargo >/dev/null ^/dev/null; or test -x $HOME/.cargo/bin/cargo
     set -l rust_cargo_bin "$HOME/.cargo/bin"
     if wants_path $rust_cargo_bin
         set PATH $rust_cargo_bin $PATH
