@@ -1,0 +1,19 @@
+## Disable Eager Documentation Generation ##
+#
+# Ruby Gems insists on blocking till it builds all docs for all just-installed
+# gems serially. That's obnoxious, because it is sloooooow.
+#
+# If you find you want docs later, you can run:
+#
+#     gem rdoc --all
+#
+# You can then view the docs in your browser by running:
+#
+#     gem server
+#
+# And then visiting the URL it gives you, which is probably
+# <http://localhost:8808>.
+#
+# You can also use them at the command line via `ri`,
+# which is kinda like `perldoc`.
+gem: --no-document
