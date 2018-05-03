@@ -39,5 +39,8 @@
         "*.theme": "php"
     },
     "window.restoreWindows": "all",
-    "window.restoreFullscreen": true
+    "window.restoreFullscreen": true,
+    "FSharp.fsacRuntime": "netcore",
+    "terminal.integrated.fontFamily": "'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 16
 }
