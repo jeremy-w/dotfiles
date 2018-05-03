@@ -19,6 +19,7 @@
 	autosquash = true
 [push]
 	default = current
+	recurseSubmodules = check
 [branch]
 	autosetupmerge = true
 [ghi]
@@ -46,3 +47,7 @@
 	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
 [merge]
 	conflictstyle = diff3
+[rerere]
+	enabled = true
+[status]
+	submodulesummary = 1
