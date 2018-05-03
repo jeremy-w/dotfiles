@@ -17,6 +17,8 @@
 	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
 [rebase]
 	autosquash = true
+	missingCommitsCheck = error
+	abbreviateCommands = true
 [push]
 	default = current
 	recurseSubmodules = check
