@@ -54,5 +54,5 @@ Host metropolis.local shermans.me
     ForwardAgent yes
     IdentityFile ~/.ssh/id_rsa512
 
-Host gitlab.corp.apple.com
+Host github.pie.apple.com gitlab.corp.apple.com
     IdentityFile ~/.ssh/id_rsa512
