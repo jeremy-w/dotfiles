@@ -4,3 +4,7 @@ config/gtk-2.0/
 # Should maybe not have gone with Vundle over Pathogen.
 # Oh well. Ignore these rather than submoduling them:
 vim/bundle/
+
+# For some reason, Yarn thinks its data files are config files.
+config/yarn/global/
+config/yarn/link/
