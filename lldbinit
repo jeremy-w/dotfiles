@@ -7,11 +7,18 @@ script print "(.lldbinit loaded)",
 # Flip on in build settings if you want it.
 #settings append target.env-vars NSZombieEnabled=1
 
-# Activate alerts.
+# Activate asserts.
 settings append target.env-vars NSDebugEnabled=1
 
 # Ensure CoreData guards its concurrency rules.
 settings append target.run-args -com.apple.CoreData.ConcurrencyDebug 1
+
+# Show backtraces for errors like:
+#
+#     CGContextSetCompositeOperation: invalid context 0x0. If you want to see
+#     the backtrace, please set CG_CONTEXT_SHOW_BACKTRACE environmental
+#     variable.
+settings append target.env-vars CG_CONTEXT_SHOW_BACKTRACE=1
 
 # Facebook's Chisel library is a collection of helpful extra commands for
 # iOS development. I never really got to like them much, though.
