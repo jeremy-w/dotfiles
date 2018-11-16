@@ -20,5 +20,9 @@
     {
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "findJump.activate"
     }
 ]
