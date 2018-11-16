@@ -160,3 +160,10 @@ end
 # Prevent `--` from turning into an en-dash, while still leaving smart quotes
 # enabled. <URL:http://mjtsai.com/blog/2016/04/25/outsmarting-the-smart-dash/>
 [ -x (which defaults) ]; and defaults write -g NSAutomaticDashSubstitutionEnabled 0
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish
