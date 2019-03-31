@@ -8,3 +8,6 @@ vim/bundle/
 # For some reason, Yarn thinks its data files are config files.
 config/yarn/global/
 config/yarn/link/
+
+# Ditto nvm
+config/nvm/
