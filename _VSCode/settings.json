@@ -1,6 +1,9 @@
 // Place your settings in this file to overwrite the default settings
+// See: https://code.visualstudio.com/docs/getstarted/settings
 {
+    "breadcrumbs.enabled": true,
     "diffEditor.renderSideBySide": false,
+
     "editor.find.autoFindInSelection": true,
     "editor.fontFamily": "Verdana, 'Go Regular', InputSans, Georgia, proportional",
     "editor.fontSize": 16,
@@ -10,9 +13,22 @@
     "editor.scrollBeyondLastLine": false,
     "editor.renderLineHighlight": "all",
     "editor.renderControlCharacters": true,
+    "editor.showFoldingControls": "always",
     "editor.minimap.renderCharacters": false,
-    "files.insertFinalNewline": true,
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      },
+
+    "terminal.integrated.fontFamily": "'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 16,
+
     "javascript.implicitProjectConfig.checkJs": true,
+
+    // Requires the todo highlight extension:
+    //   code --install-extension wayou.vscode-todo-highlight
     "todohighlight.keywords": [
         "TODO:",
         "FIXME:",
@@ -22,7 +38,7 @@
         "!!!:",
         "PERF:"
     ],
-    "editor.showFoldingControls": "always",
+
     "search.useIgnoreFilesByDefault": true,
     "search.exclude": {
         "**/node_modules": true,
@@ -30,6 +46,8 @@
         "**/dist": true,
         "**/build": true
     },
+
+    "files.insertFinalNewline": true,
     "files.associations": {
         "*.install": "php",
         "*.module": "php",
@@ -38,11 +56,22 @@
         "*.test": "php",
         "*.theme": "php"
     },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/[._]*.s[a-w][a-z]": true,
+        "**/[._]s[a-w][a-z]": true,
+        "**/*.un~": true,
+        "**/\\.\\#*": true,
+        "**/\\#*\\#": true
+    },
+
     "window.restoreWindows": "all",
     "window.restoreFullscreen": true,
+
     "FSharp.fsacRuntime": "netcore",
-    "terminal.integrated.fontFamily": "'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontSize": 16,
-    "editor.formatOnSave": false,
-    "eslint.packageManager": "yarn"
+
+    "eslint.packageManager": "yarn",
+    "workbench.sideBar.location": "left",
+    "editor.tabCompletion": "on"
 }
