@@ -57,23 +57,9 @@ end
 
 ### RUBY ###
 # Let rbenv work its PATH magic.
-if which rbenv>/dev/null ^/dev/null
-    # Actually, rbenv init doesn't handle fish.
-    # Let's do it manually.
-    set PATH "$HOME/.rbenv/shims" $PATH
-    setenv RBENV_SHELL fish
-    rbenv rehash ^/dev/null
-    function rbenv
-        set -l command $argv[1]
-        set -e argv[1]
-
-        switch "$command"
-            case rehash shell
-                . (rbenv "sh-$command" $argv | psub)
-            case '*'
-                command rbenv "$command" $argv
-        end
-    end
+if which rbenv >/dev/null 2>/dev/null
+    # rbenv since version 1.0 of 2015-12-24 supports fish.
+    status --is-interactive; and source (rbenv init -|psub)
 end
 
 ### PYTHON ###
