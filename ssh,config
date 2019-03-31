@@ -8,6 +8,7 @@ Host *
   UseRoaming no
   # macOS Sierra/10.2 or later only:
   # Let ssh-agent remember keys on macOS Sierra 10.12+.
+  # See: https://developer.apple.com/library/archive/technotes/tn2449/
   UseKeychain yes
   AddKeysToAgent yes
 
