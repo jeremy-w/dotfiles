@@ -1,7 +1,7 @@
 # Configuration file - shared by bash and zsh,
 # read by all interactive shells.
 PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin:"
+export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin"
 export MONO_PATH="/Library/Frameworks/Mono.framework/Commands"
 export NODE_PATH="/usr/local/lib/node_modules"
 has () {
@@ -44,12 +44,18 @@ if has brew; then
 fi
 
 # Load nvm
-load_nvm () {
-  if `test -e "$HOME/.nvm/nvm.sh"`; then
-    export NVM_DIR="$HOME/.nvm"
-    source "$HOME/.nvm/nvm.sh"
-  fi
+load_nvm() {
+  # This is just a git clone of the creationix/nvm repo.
+  # Do NOT install via Homebrew. It'll get weird.
+  export NVM_DIR="$HOME/.nvm"
+
+  # NVM itself.
+  [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
+
+  # Bash completion
+  [ -s "$HOME/.nvm/etc/bash_completion" ] && . "$HOME/.nvm/etc/bash_completion"
 }
+load_nvm
 
 # 10.6.4+ - generate symbols; assumes a kernel debug kit is mounted
 # user must supply appropriate -arch and kext
