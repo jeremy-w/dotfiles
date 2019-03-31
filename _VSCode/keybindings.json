@@ -24,5 +24,9 @@
     {
         "key": "ctrl+;",
         "command": "findJump.activate"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.tasks.test"
     }
 ]
