@@ -1,0 +1,20 @@
+/*
+Global Snippets
+Jeremy W. Sherman (github:@jeremy-w)
+
+Syntax: https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax
+*/
+{
+    "eslint-disable-line": {
+        "scope": "typescript,javascript",
+        "body": "eslint-disable-line $0",
+        "description": "eslint: Disable for the current line.",
+        "prefix": "eslint-disable-line"
+    },
+    "async function": {
+        "scope": "javascript",
+        "body": "async function $1() {\r\t$0\r}",
+        "description": "js: Stub out async function decl.",
+        "prefix": "afun"
+    }
+}
