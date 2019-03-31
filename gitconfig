@@ -8,6 +8,7 @@
 [diff]
 	renamelimit = 0
 	compactionHeuristic = true
+	algorithm = patience
 [github]
 	user = jeremy-w
 	token = 5f45f05510ca7db6d957a60de298ad1b
