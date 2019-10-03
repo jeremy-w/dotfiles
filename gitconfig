@@ -9,6 +9,10 @@
 	renamelimit = 0
 	compactionHeuristic = true
 	algorithm = patience
+[diff "swift"]
+	xfuncname = ((func|class|protocol|extension)\\s+.*)$
+[diff "kotlin"]
+	xfuncname = ((fun|class|enum|object)\\s+.*)$
 [github]
 	user = jeremy-w
 	token = 5f45f05510ca7db6d957a60de298ad1b
@@ -54,3 +58,5 @@
 	enabled = true
 [status]
 	submodulesummary = 1
+[pull]
+	rebase = true
