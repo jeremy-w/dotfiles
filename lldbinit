@@ -1,4 +1,5 @@
-script print "(.lldbinit loaded)",
+script print("(.lldbinit loaded)", end='')
+
 # Malloc logging lets us get info on the history of an address.
 # This mostly slows stuff down for no gain in Swift-land, though.
 #settings append target.env-vars MallocStackLogging=1 MallocStackLoggingNoCompact=1 MallocScribble=1 MallocPreScribble=1
@@ -27,7 +28,7 @@ settings append target.env-vars CG_CONTEXT_SHOW_BACKTRACE=1
 #command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 ## LLDB finally gained the ability to manage "future break"!
-script print "   Adding standard breakpoints."
+script print("   Adding standard breakpoints.")
 #breakpoint set -n objc_exception_throw  # often want to flip this off, honestly
 breakpoint set -n malloc_error_break
 breakpoint set -n _NSLockError
