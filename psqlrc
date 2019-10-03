@@ -1,0 +1,17 @@
+\pset format wrapped
+\pset linestyle unicode
+\pset border 2
+\pset null '(nihil)'
+
+-- See: https://www.postgresql.org/docs/11/app-psql.html#APP-PSQL-PROMPTING
+-- Normal prompt:
+\set PROMPT1 '%n@%m:%~%R%# '
+-- More input expected (command continuation):
+\set PROMPT2 '/*…*/ '
+
+/*
+for sharing query results in documents, you'll probably want:
+
+    \pset x
+    \pset border 0
+*/
