@@ -1,3 +1,12 @@
+config/inkscape
+config/gcloud
+config/fontforge/FontsOpenAtLastQuit
+config/karabiner/automatic_backups
+config/wireshark
+config/configstore
+config/eclipse-workspace
+config/ILSpy.xml
+
 # Only has filechooser state, which doesn't need syncing:
 config/gtk-2.0/
 
