@@ -1,16 +1,30 @@
 ## CONFIG ##
+# Tell less to always render color escapes.
 setenv LESS -R
+
+# Make sure we have a sane locale.
 setenv LANG "en_US.UTF-8"
 setenv LC_CTYPE "UTF-8"
+setenv LC_ALL "en_US.UTF-8"
+
+# Vim shall be our editor.
 setenv EDITOR "/usr/bin/vim"
 
 source ~/.config/fish/fish_git_prompt_colors.fish
 
+
+# Don't interrupt `brew install` with a `brew update`
 setenv HOMEBREW_NO_AUTO_UPDATE 1
-setenv LC_ALL "en_US.UTF-8"
+
+# Silence messages from https://npm.im/opencollective-postinstall
+setenv DISABLE_OPENCOLLECTIVE true
+
 
 ## PATH MANAGEMENT ##
 # fish_user_paths is automatically prepended to PATH and can be universal.
+# See: https://github.com/fish-shell/fish-shell/issues/527#issuecomment-13315434
+# But `set --append fish_user_paths some/path/here` is your friend.
+#
 # We won't manage it here, since the idea is the user edits it themselves
 # as desired for that specific machine.
 function wants_path -a path
@@ -153,3 +167,7 @@ end
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish
