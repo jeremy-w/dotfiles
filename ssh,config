@@ -1,5 +1,3 @@
-VisualHostKey yes
-
 Host *
   compression yes
   # Mitigation for CVE-0216-0778.
