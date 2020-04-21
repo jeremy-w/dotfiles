@@ -4,8 +4,8 @@
     "breadcrumbs.enabled": true,
     "diffEditor.renderSideBySide": false,
 
-    "editor.find.autoFindInSelection": true,
-    "editor.fontFamily": "Verdana, 'Go Regular', InputSans, Georgia, proportional",
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.fontFamily": "'Comic Sans MS', Verdana, 'Go Regular', InputSans, Georgia, proportional",
     "editor.fontSize": 16,
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
@@ -15,14 +15,13 @@
     "editor.renderControlCharacters": true,
     "editor.showFoldingControls": "always",
     "editor.minimap.renderCharacters": false,
-    "editor.formatOnSave": false,
     "editor.quickSuggestions": {
         "other": true,
         "comments": true,
         "strings": true
-      },
+    },
 
-    "terminal.integrated.fontFamily": "'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'monofur for Powerline', 'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 16,
 
     "javascript.implicitProjectConfig.checkJs": true,
@@ -73,5 +72,119 @@
 
     "eslint.packageManager": "yarn",
     "workbench.sideBar.location": "left",
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "workbench.colorTheme": "Default High Contrast",
+    "liveshare.audio.startCallOnShare": true,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "C# Purple",
+            "value": "#68217A"
+        },
+        {
+            "name": "Gatsby Purple",
+            "value": "#639"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "window.newWindowDimensions": "inherit",
+    "window.openFoldersInNewWindow": "on",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.tree.indent": 18,
+    "workbench.list.horizontalScrolling": true,
+    "editor.fontLigatures": true,
+    "editor.parameterHints.cycle": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.fileHistory.location": "explorer",
+    "gitlens.views.lineHistory.location": "explorer",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "glitch.token": "c98f0454-035e-462f-a754-d943506d2f8d",
+    "javascript.suggest.completeFunctionCalls": true,
+    "tslint.jsEnable": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.panel.defaultLocation": "right",
+    "terminal.integrated.scrollback": 5000,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.confirmDragAndDrop": false,
+
+    "launch": {
+        "configurations": [{
+            "type": "node",
+            "request": "launch",
+            "name": "Jest Tests",
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "args": [
+                "-i"
+            ],
+            "preLaunchTask": "build",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outFiles": [
+                "${workspaceRoot}/dist/**/*"
+            ],
+            "envFile": "${workspaceRoot}/.env"
+        }],
+        "compounds": []
+    },
+    "editor.accessibilitySupport": "off"
 }

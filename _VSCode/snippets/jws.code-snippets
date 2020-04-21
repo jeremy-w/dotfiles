@@ -5,16 +5,40 @@ Jeremy W. Sherman (github:@jeremy-w)
 Syntax: https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax
 */
 {
-    "eslint-disable-line": {
-        "scope": "typescript,javascript",
-        "body": "eslint-disable-line $0",
+    "eslint-disable-next-line": {
+        "scope": "typescript,javascript,javascriptreact,typescriptreact",
+        "body": "eslint-disable-next-line $0",
         "description": "eslint: Disable for the current line.",
-        "prefix": "eslint-disable-line"
+        "prefix": "eslint-disable-next-line"
     },
     "async function": {
-        "scope": "javascript",
+        "scope": "typescript,javascript,javascriptreact,typescriptreact",
         "body": "async function $1() {\r\t$0\r}",
         "description": "js: Stub out async function decl.",
         "prefix": "afun"
+    },
+    "sync function": {
+        "scope": "typescript,javascript,javascriptreact,typescriptreact",
+        "body": "function $1() {\r\t$0\r}",
+        "description": "js: Stub out sync function decl.",
+        "prefix": "sfun"
+    },
+    "sync arrow function": {
+        "scope": "typescript,javascript,javascriptreact,typescriptreact",
+        "body": "() => {\r\t$0\r}",
+        "description": "js: Stub out sync arrow function decl.",
+        "prefix": "asfun"
+    },
+    "async arrow function": {
+        "scope": "typescript,javascript,javascriptreact,typescriptreact",
+        "body": "async () => {\r\t$0\r}",
+        "description": "js: Stub out sync arrow function decl.",
+        "prefix": "aafun"
+    },
+    "es6 error subclass": {
+        "scope": "javascript,javascriptreact",
+        "body": "class $1Error extends Error {\rconstructor($2, ...rest) {\rsuper(...rest);\r\rthis.name = '$1Error';\rthis.extras = { $2 };\rError.captureStackTrace(this, $1Error);\r}\r}",
+        "description": "es6: Custom error subclass",
+        "prefix": "decl-err"
     }
 }

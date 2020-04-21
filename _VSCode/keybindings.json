@@ -28,5 +28,22 @@
     {
         "key": "cmd+t",
         "command": "workbench.action.tasks.test"
+    },
+
+    // expand region support
+    // https://marketplace.visualstudio.com/items?itemName=letrieu.expand-region
+    {
+        "key": "ctrl+w",
+        "command": "expand_region",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "undo_expand_region",
+        "when": "editorTextFocus && editorHasSelection"
+    },
+    {
+        "key": "ctrl+cmd+e",
+        "command": "surround.with.element"
     }
 ]
