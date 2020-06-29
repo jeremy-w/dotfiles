@@ -43,8 +43,7 @@ Host dev.alchiba.com dev1.alchiba.com
 Host dev1.alchiba.bnr
   IdentityFile ~/.ssh/jeremy@alchiba-id_rsa
 
-Host 192.241.212.91 gateway-arch jeremywsherman.com
-    Port 11522
+Host 167.99.144.78 gateway-arch jeremywsherman.com
     IdentityFile ~/.ssh/id_rsa512
 
 # shermans.me NAS
