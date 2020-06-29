@@ -3,6 +3,12 @@
 [user]
 	name = Jeremy W. Sherman
 	email = jeremyw.sherman@gmail.com
+# Shared .gitconfig example:
+#
+#     [includeIf "gitdir:~/path/to/root/dir/**"]
+#     	path = "~/path/to/root/dir/.gitconfig"
+#
+# This makes setting user.email for a group of checkouts really easy!
 [pack]
 	threads = 0
 [diff]
