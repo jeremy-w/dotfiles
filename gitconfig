@@ -30,6 +30,7 @@
 	recurseSubmodules = check
 [branch]
 	autosetupmerge = true
+	sort = -committerdate
 [ghi]
 	token = 4c1a173d34ce31bfcaadd62433c4a823936e8860
 [credential]
