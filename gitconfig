@@ -17,6 +17,7 @@
 	user = jeremy-w
 	token = 5f45f05510ca7db6d957a60de298ad1b
 [core]
+	attributesFile = ~/.gitattributes
 #	autocrlf = input
   excludesfile = ~/.gitignore
 	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
