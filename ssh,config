@@ -20,9 +20,12 @@ Host silver.bnr
 
 Host github.com 207.97.227.239 204.232.175.90 192.30.252.0/22
   User git
-  Hostname github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_github
+  # Next 2 lines enable using SSH over HTTPS port.
+  # https://help.github.com/en/github/authenticating-to-github/using-ssh-over-the-https-port
+  Hostname ssh.github.com
+  Port 443
 
 Host gitlab.com
   PreferredAuthentications publickey
