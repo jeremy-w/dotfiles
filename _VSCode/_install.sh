@@ -1,19 +1,32 @@
-# NOTE: This expects to be run in this directory!
+#!/bin/bash
+# Links VS Code config files from the folder containing this script into the folder where it expects to find them.
+thisDotfilesFolder=$(dirname "$0")
+
 # Install and launch VSCode once before running this.
-set VSCODE_SETTINGS ~/Library/Application\ Support/Code/User/
+# Settings locations are doc'd at: https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations
+unameOut="$(uname -s)"
+case $(uname -s) in
+    Linux*) platformSettingsFolder="$HOME/.config/Code/User/"
+        ;;
+    Darwin*) platformSettingsFolder="$HOME/Library/Application\ Support/Code/User/"
+        ;;
+    CYGWIN* | MINGW*) platformSettingsFolder="$APPDATA/Code/User"
+        ;;
+    *)
+        echo "$0: No clue where VS Code settings are hiding under $unameOut. Bailing." 1>&2
+        exit 1
+        ;;
+esac
 
-# Initial import - already done
-#mv $VSCODE_SETTINGS/snippets .
-#mv $VSCODE_SETTINGS/keybindings.json .
-#mv $VSCODE_SETTINGS/settings.json .
-
-# Linking these into place where VSCode expects them
-set base (dirname $0)
+# For reference, the files to be installed were originally imported using commands like:
+#       for file in snippets keybindings.json settings.json; do
+#           mv "$platformSettingsFolder/$file" .
+#       done
 
 # New VSCode creates an empty snippets folder.
-rmdir $VSCODE_SETTINGS/snippets
-ln -s $PWD/snippets/ $VSCODE_SETTINGS/snippets
+rmdir "$platformSettingsFolder/snippets"
+ln -s "$thisDotfilesFolder/snippets/" "$platformSettingsFolder/snippets"
 
 # It doesn't create keybindings or settings, though.
-ln -s $PWD/keybindings.json $VSCODE_SETTINGS/keybindings.json
-ln -s $PWD/settings.json $VSCODE_SETTINGS/settings.json
+ln -s "$thisDotfilesFolder/keybindings.json" "$platformSettingsFolder/keybindings.json"
+ln -s "$thisDotfilesFolder/settings.json" "$platformSettingsFolder/settings.json"
