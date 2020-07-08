@@ -14,7 +14,7 @@
 [diff]
 	renamelimit = 0
 	compactionHeuristic = true
-	algorithm = patience
+	algorithm = histogram
 [diff "swift"]
 	xfuncname = ((func|class|protocol|extension)\\s+.*)$
 [diff "kotlin"]
