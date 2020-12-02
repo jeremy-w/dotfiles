@@ -68,7 +68,6 @@ for path in $paths_to_append
     end
 end
 
-
 ### RUBY ###
 # Let rbenv work its PATH magic.
 if which rbenv >/dev/null 2>/dev/null
@@ -141,6 +140,15 @@ if which cargo >/dev/null ^/dev/null; or test -x $HOME/.cargo/bin/cargo
     end
 end
 
+## COMPLETIONS ##
+### AWS CLI: via https://stackoverflow.com/questions/26981542/aws-cli-command-completion-with-fish-shell
+if which aws_completer 2>/dev/null 1>/dev/null
+    function __fish_complete_aws
+        env COMP_LINE=(commandline -pc) aws_completer | tr -d ' '
+    end
+
+    complete -c aws -f -a "(__fish_complete_aws)"
+end
 
 ## COMMANDS ##
 # autojump adds a `j` command for jumping to a directory.
