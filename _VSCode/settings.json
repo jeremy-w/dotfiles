@@ -24,7 +24,7 @@
     "terminal.integrated.fontFamily": "'monofur for Powerline', 'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 16,
 
-    "javascript.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
 
     // Requires the todo highlight extension:
     //   code --install-extension wayou.vscode-todo-highlight
@@ -341,5 +341,9 @@
                 }
             }
         ]
-    }
+    },
+    "window.zoomLevel": 0,
+    "errorLens.addNumberOfDiagnostics": true,
+    "errorLens.gutterIconsEnabled": true,
+    "python.languageServer": "Pylance"
 }
