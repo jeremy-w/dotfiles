@@ -170,3 +170,5 @@ bindkey ' ' magic-space
 
 # added by travis gem
 [ -f /Users/jeremy/.travis/travis.sh ] && source /Users/jeremy/.travis/travis.sh
+
+[ -s "/Users/jeremy/.scm_breeze/scm_breeze.sh" ] && source "/Users/jeremy/.scm_breeze/scm_breeze.sh"
