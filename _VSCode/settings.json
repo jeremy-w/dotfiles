@@ -159,7 +159,9 @@
     "gitlens.views.lineHistory.location": "explorer",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
+
     "glitch.token": "c98f0454-035e-462f-a754-d943506d2f8d",
+
     "javascript.suggest.completeFunctionCalls": true,
     "tslint.jsEnable": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -168,23 +170,176 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "explorer.confirmDragAndDrop": false,
 
-    "launch": {
-        "configurations": [{
-            "type": "node",
-            "request": "launch",
-            "name": "Jest Tests",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-            "args": [
-                "-i"
-            ],
-            "preLaunchTask": "build",
-            "internalConsoleOptions": "openOnSessionStart",
-            "outFiles": [
-                "${workspaceRoot}/dist/**/*"
-            ],
-            "envFile": "${workspaceRoot}/.env"
-        }],
-        "compounds": []
+    "editor.accessibilitySupport": "off",
+
+    "cSpell.dictionaryDefinitions": [
+        {"name": "banno", "path": "/Users/jeremy/BNR/banno/banno-dict.txt"}
+    ],
+    "cSpell.dictionaries": [
+        "banno"
+    ],
+
+    "editor.columnSelection": false,
+    "dart.openDevTools": "flutter",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "terraform.languageServer": {
+
+
+        "external": true,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
     },
-    "editor.accessibilitySupport": "off"
+    "workbench.activityBar.visible": true,
+    "yaml.schemas": {
+        "file:///Users/jeremy/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "2e9985e8-a6f7-42ce-8078-067058bb1e87",
+            "enabled": true,
+            "name": "My projekt202 Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "4d17ad00-8c35-4216-af76-a801aa189115",
+            "monitor": true
+        }
+    ],
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#000",
+        "selection.background": "#098005",
+        "editor.selectionBackground": "#ffffff",
+        "statusBarItem.remoteBackground": "#00000000",
+        "editor.background": "#000000",
+        "editor.foreground": "#ffffff",
+        "editorIndentGuide.background": "#ffffff",
+        "editorIndentGuide.activeBackground": "#ffffff",
+        "sideBarTitle.foreground": "#ffffff"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Function declarations",
+                "scope": [
+                    "entity.name.function",
+                    "support.function",
+                    "support.constant.handlebars",
+                    "source.powershell variable.other.member"
+                ],
+                "settings": {
+                    "foreground": "#dcdcac"
+                }
+            },
+            {
+                "name": "Types declaration and references",
+                "scope": [
+                    "meta.return-type",
+                    "support.class",
+                    "support.type",
+                    "entity.name.type",
+                    "entity.name.namespace",
+                    "entity.name.scope-resolution",
+                    "entity.name.class",
+                    "storage.type.cs",
+                    "storage.type.generic.cs",
+                    "storage.type.modifier.cs",
+                    "storage.type.variable.cs",
+                    "storage.type.annotation.java",
+                    "storage.type.generic.java",
+                    "storage.type.java",
+                    "storage.type.object.array.java",
+                    "storage.type.primitive.array.java",
+                    "storage.type.primitive.java",
+                    "storage.type.token.java",
+                    "storage.type.groovy",
+                    "storage.type.annotation.groovy",
+                    "storage.type.parameters.groovy",
+                    "storage.type.generic.groovy",
+                    "storage.type.object.array.groovy",
+                    "storage.type.primitive.array.groovy",
+                    "storage.type.primitive.groovy"
+                ],
+                "settings": {
+                    "foreground": "#54c8b0"
+                }
+            },
+            {
+                "name": "Types declaration and references, TS grammar specific",
+                "scope": [
+                    "meta.type.cast.expr",
+                    "meta.type.new.expr",
+                    "support.constant.math",
+                    "support.constant.dom",
+                    "support.constant.json",
+                    "entity.other.inherited-class"
+                ],
+                "settings": {
+                    "foreground": "#54c8b0"
+                }
+            },
+            {
+                "name": "Control flow / Special keywords",
+                "scope": [
+                    "keyword.control",
+                    "source.cpp keyword.operator.new",
+                    "source.cpp keyword.operator.delete",
+                    "keyword.other.using",
+                    "keyword.other.operator"
+                ],
+                "settings": {
+                    "foreground": "#c487bf"
+                }
+            },
+            {
+                "name": "Variable and parameter name",
+                "scope": [
+                    "variable",
+                    "meta.definition.variable.name",
+                    "support.variable"
+                ],
+                "settings": {
+                    "foreground": "#a0dcfc"
+                }
+            },
+            {
+                "name": "Object keys, TS grammar specific",
+                "scope": [
+                    "meta.object-literal.key"
+                ],
+                "settings": {
+                    "foreground": "#a0dcfc"
+                }
+            },
+            {
+                "name": "CSS property value",
+                "scope": [
+                    "support.constant.property-value",
+                    "support.constant.font-name",
+                    "support.constant.media-type",
+                    "support.constant.media",
+                    "constant.other.color.rgb-value",
+                    "constant.other.rgb-value",
+                    "support.constant.color"
+                ],
+                "settings": {
+                    "foreground": "#cc927a"
+                }
+            },
+            {
+                "name": "HC Search Editor context line override",
+                "scope": "meta.resultLinePrefix.contextLinePrefix.search",
+                "settings": {
+                    "foreground": "#cdeccd"
+                }
+            }
+        ]
+    }
 }
