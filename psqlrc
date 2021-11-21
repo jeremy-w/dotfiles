@@ -15,3 +15,7 @@ for sharing query results in documents, you'll probably want:
     \pset x
     \pset border 0
 */
+
+-- https://hakibenita.com/postgresql-unknown-features
+\set COMP_KEYWORD_CASE 'upper'
+\set HISTFILE ~/.psql_history-:DBNAME
