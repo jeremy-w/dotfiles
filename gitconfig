@@ -30,7 +30,7 @@
 	attributesFile = ~/.gitattributes
 #	autocrlf = input
   excludesfile = ~/.gitignore
-	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
+	pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
 [rebase]
 	autosquash = true
 	missingCommitsCheck = error
@@ -45,6 +45,8 @@
 	token = 4c1a173d34ce31bfcaadd62433c4a823936e8860
 [credential]
 	helper = osxkeychain
+# Installed by microsoft/scalar.
+#	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [alias]
 	co = checkout
 	br = branch
@@ -59,12 +61,13 @@
 	quickserve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [submodule]
 	fetchJobs = 7
+	stickyRecursiveClone = true
 [pager]
-	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
-	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
-	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -R
+	log = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
+	show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
+	diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
 [interactive]
-	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+	diffFilter = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight
 [merge]
 	conflictstyle = diff3
 [rerere]
@@ -75,3 +78,7 @@
 	rebase = true
 [init]
 	defaultBranch = main
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[help]
+	autoCorrect = prompt
