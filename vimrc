@@ -115,6 +115,11 @@ augroup filetype
 au! BufRead,BufNewFile *.md     set filetype=markdown
 augroup END
 
+" git-revise -i is roughly the same as git rebase -i, minus drop.
+augroup filetype
+au! BufRead,BufNewFile git-revise-todo     set filetype=gitrebase
+augroup END
+
 "" Code styles
 augroup style
 au! BufRead,BufNewFile {*.md,*markdown,*.htm,*.html,*.js,*.coffee}
