@@ -20,3 +20,9 @@ config/yarn/link/
 
 # Ditto nvm
 config/nvm/
+
+# Ignore various things that don't really have any config.
+config/mmc-doc/
+config/mmc-get/
+config/swi-prolog/
+config/glab-cli/
