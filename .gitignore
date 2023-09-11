@@ -6,6 +6,8 @@ config/wireshark
 config/configstore
 config/eclipse-workspace
 config/ILSpy.xml
+# Everything but the config file we've added shouldn't be tracked
+config/mssqlcli
 
 # Only has filechooser state, which doesn't need syncing:
 config/gtk-2.0/
