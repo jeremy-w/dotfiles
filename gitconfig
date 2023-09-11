@@ -82,3 +82,5 @@
 	useHttpPath = true
 [help]
 	autoCorrect = prompt
+[remote "origin"]
+	fetch = +refs/notes/*:refs/notes/*
