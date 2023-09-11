@@ -1,0 +1,10 @@
+[[snippets]]
+  description = "Nuke & pave cc_db"
+  command = "sqlcmd -W -I -d master -Q 'ALTER DATABASE [cc_db] SET SINGLE_USER WITH ROLLBACK IMMEDIATE; drop database cc_db; create database cc_db collate Latin1_General_100_CI_AI_SC_UTF8;'"
+  tag = ["cc", "mssql"]
+  output = ""
+
+[[snippets]]
+  description = "1Password signin"
+  command = "bass 'eval $(op signin)'"
+  output = ""
