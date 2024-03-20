@@ -72,7 +72,7 @@ end
 
 ### RUBY ###
 # Let rbenv work its PATH magic.
-if which rbenv >/dev/null 2>/dev/null
+if type -q rbenv
     # rbenv since version 1.0 of 2015-12-24 supports fish.
     status --is-interactive; and source (rbenv init -|psub)
 end
@@ -82,7 +82,7 @@ function jws_pyenv_init
     # Let pyenv work its PATH magic.
     # py3.3+ has pyvenv baked in to replace virtualenv.
     # py3.4+ has pip baked in.
-    if which pyenv >/dev/null ^/dev/null
+    if type -q pyenv
         # `pyenv init` prefixes with `status --is-interactive; and`, but I think
         # you'd want the correct environment even in non-interactive shells, no?
         # fishism: psub: does process substitution by using a named pipe.
@@ -99,7 +99,7 @@ function jws_pyenv_init
     #
     # Sourcing it lets it automatically de/activate the appropriate virtualenv
     # when you enter a directory hierarchy.
-    if which pyenv-virtualenv-init >/dev/null ^/dev/null
+    if type -q pyenv-virtualenv-init
         source (pyenv virtualenv-init -|psub)
     end
 end
@@ -113,7 +113,7 @@ end
 setenv PERL_CPANM_OPT "--local-lib=~/perl5"
 
 ### GO ###
-if which go >/dev/null ^/dev/null
+if type -q go
     setenv GOPATH "$HOME/usr/share/go"
     for godir in "$GOPATH/bin" /usr/local/opt/go/libexec/bin
         if wants_path "$godir"
@@ -123,7 +123,7 @@ if which go >/dev/null ^/dev/null
 end
 
 ### SCALA ###
-if which scalaenv >/dev/null ^/dev/null
+if type -q scalaenv
     set -l scalaenv_shims "$HOME/.scalaenv/shims"
     if wants_path $scalaenv_shims
         set PATH $scalaenv_shims $PATH
@@ -135,7 +135,7 @@ end
 
 ### RUST ###
 # rust-up actually installs cargo into the directory we're looking for.
-if which cargo >/dev/null ^/dev/null; or test -x $HOME/.cargo/bin/cargo
+if type -q cargo; or test -x $HOME/.cargo/bin/cargo
     set -l rust_cargo_bin "$HOME/.cargo/bin"
     if wants_path $rust_cargo_bin
         set PATH $rust_cargo_bin $PATH
@@ -144,7 +144,7 @@ end
 
 ## COMPLETIONS ##
 ### AWS CLI: via https://stackoverflow.com/questions/26981542/aws-cli-command-completion-with-fish-shell
-if which aws_completer 2>/dev/null 1>/dev/null
+if type -q aws_completer
     function __fish_complete_aws
         env COMP_LINE=(commandline -pc) aws_completer | tr -d ' '
     end
