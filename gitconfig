@@ -3,6 +3,7 @@
 [user]
 	name = Jeremy W. Sherman
 	email = jeremyw.sherman@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBZPP/147Kek3NgN/52OvJZIuh7mvMrX/3nhUMymWVE
 # Shared .gitconfig example:
 #
 #     [includeIf "gitdir:~/path/to/root/dir/**"]
@@ -85,3 +86,9 @@
 	autoCorrect = prompt
 [remote "origin"]
 	fetch = +refs/notes/*:refs/notes/*
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
