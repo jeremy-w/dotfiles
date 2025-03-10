@@ -21,6 +21,9 @@
 	renamelimit = 0
 	compactionHeuristic = true
 	algorithm = histogram
+	colorMoved = dimmed-zebra
+	mnemonicPrefix = true
+	renames = true
 [diff "swift"]
 	xfuncname = ((func|class|protocol|extension)\\s+.*)$
 [diff "kotlin"]
@@ -32,14 +35,23 @@
 	attributesFile = ~/.gitattributes
 #	autocrlf = input
   excludesfile = ~/.gitignore
-	pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
+	pager = delta
+[delta]
+	navigate = true
+	line-numbers = true
+[interactive]
+	diffFilter = delta --color-only
 [rebase]
 	autosquash = true
+	autoStash = true
+	updateRefs = true
 	missingCommitsCheck = error
 	abbreviateCommands = true
 [push]
 	default = current
 	recurseSubmodules = check
+	followTags = true
+	autoSetupRemote = true
 [branch]
 	autosetupmerge = true
 	sort = -committerdate
@@ -64,14 +76,9 @@
 [submodule]
 	fetchJobs = 7
 	stickyRecursiveClone = true
-[pager]
-	log = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
-	show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
-	diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -R
-[interactive]
-	diffFilter = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight
 [merge]
-	conflictstyle = diff3
+	# (just 'diff3' if git version < 2.3)
+	conflictstyle = zdiff3
 [rerere]
 	enabled = true
 	autoUpdate = true
@@ -93,3 +100,12 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
+	verbose = true
+#
+# Via: https://blog.gitbutler.com/how-git-core-devs-configure-git/
+[column]
+	ui = auto
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
