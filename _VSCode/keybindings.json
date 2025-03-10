@@ -45,5 +45,15 @@
     {
         "key": "ctrl+cmd+e",
         "command": "surround.with.element"
-    }
+    },
+    {
+        "key": "alt+cmd+h",
+        "command": "testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+      },
+      {
+        "key": "cmd+h",
+        "command": "-testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+      }
 ]
