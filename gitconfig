@@ -34,7 +34,7 @@
 [core]
 	attributesFile = ~/.gitattributes
 #	autocrlf = input
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 	pager = delta
 [delta]
 	navigate = true
