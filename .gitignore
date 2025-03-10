@@ -28,3 +28,6 @@ config/mmc-doc/
 config/mmc-get/
 config/swi-prolog/
 config/glab-cli/
+
+# Ignore very machine-specific container setup
+config/containers/*podman*
