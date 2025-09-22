@@ -94,6 +94,8 @@
 	autoCorrect = prompt
 [remote "origin"]
 	fetch = +refs/notes/*:refs/notes/*
+[maintenance]
+	repo = /Users/jeremy/git/play-by-the-writing
 [gpg]
 	format = ssh
 [gpg "ssh"]

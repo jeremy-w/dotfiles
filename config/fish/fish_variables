@@ -1,10 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ANDROID_HOME:/Users/jeremy/Library/Android/sdk
 SETUVAR --export AZURE_CORE_COLLECT_TELEMETRY:0
 SETUVAR --export DANGER_GITHUB_API_TOKEN:REDACTED
 SETUVAR Downloads:/Users/jeremy/Library/Mobile\x20Documents/com\x7eapple\x7eCloudDocs/Downloads
 SETUVAR --export GO111MODULE:on
 SETUVAR --export GOROOT:/Users/jeremy/usr/share/go
+SETUVAR --export JAVA_HOME:/Applications/Android\x20Studio\x2eapp/Contents/jbr/Contents/Home
 SETUVAR --export OP_SESSION_bignerd_ranch:REDACTED
 SETUVAR --export STABLE_KEY:REDACTED
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
@@ -42,5 +44,5 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/jeremy/\x2elocal/bin\x1e/Users/jeremy/\x2enimble/bin\x1e/usr/local/share/dotnet\x1e/usr/local/opt/libpq/bin\x1e/Users/jeremy/Library/Python/3\x2e7/bin/
+SETUVAR fish_user_paths:/Users/jeremy/\x2ecargo/bin\x1e/Users/jeremy/\x2elocal/bin\x1e/Users/jeremy/\x2enimble/bin\x1e/usr/local/share/dotnet\x1e/usr/local/opt/libpq/bin\x1e/Users/jeremy/Library/Python/3\x2e7/bin/
 SETUVAR iCloud:/Users/jeremy/Library/Mobile\x20Documents/com\x7eapple\x7eCloudDocs

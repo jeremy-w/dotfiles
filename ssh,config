@@ -57,3 +57,6 @@ Host metropolis.local shermans.me
 
 Host github.pie.apple.com gitlab.corp.apple.com
     IdentityFile ~/.ssh/id_rsa512
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

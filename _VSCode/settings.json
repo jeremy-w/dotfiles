@@ -165,13 +165,15 @@
       "path": "/Users/jeremy/BNR/banno/banno-dict.txt"
     }
   ],
-  "cSpell.dictionaries": ["banno"],
+  "cSpell.dictionaries": [
+    "banno"
+  ],
   "editor.columnSelection": false,
   "dart.openDevTools": "flutter",
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
   "yaml.schemas": {
-    "file:///Users/jeremy/.vscode/extensions/atlassian.atlascode-3.4.11/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///Users/jeremy/.vscode/extensions/atlassian.atlascode-3.8.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.bitbucket.enabled": false,
   "atlascode.jira.jqlList": [
@@ -295,7 +297,9 @@
       },
       {
         "name": "Object keys, TS grammar specific",
-        "scope": ["meta.object-literal.key"],
+        "scope": [
+          "meta.object-literal.key"
+        ],
         "settings": {
           "foreground": "#a0dcfc"
         }
@@ -371,5 +375,14 @@
   "python.analysis.extraPaths": [
     "/usr/local/Cellar/python@3.11/3.11.7_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/"
   ],
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
