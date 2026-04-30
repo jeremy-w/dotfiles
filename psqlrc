@@ -3,6 +3,10 @@
 \pset border 2
 \pset null '(nihil)'
 
+-- Automatically switch to expanded mode when too many columns.
+-- Expanded mode does line-per-column to avoid unreadable wrapping.
+\x auto
+
 -- See: https://www.postgresql.org/docs/11/app-psql.html#APP-PSQL-PROMPTING
 -- Normal prompt:
 \set PROMPT1 '%n@%m:%~%R%# '
