@@ -1,0 +1,24 @@
+# Fix delete-backwards-by-word.
+keybind = opt+backspace=text:\x1b\x7f
+macos-option-as-alt = left
+
+cursor-style = block
+cursor-style-blink = false
+
+font-family = "Victor Mono"
+font-size = 16
+font-style = Bold
+
+link-previews = true
+
+# Found I was unable to paste my SSH keyphrase on 2026-04-30.
+macos-auto-secure-input = false
+
+# Work around ghostty's termcap likely unvailable
+# https://ghostty.org/docs/features/shell-integration#ssh-integration
+shell-integration-features = ssh-env,ssh-terminfo
+
+# 25 MiB. Default is 10MB. This is per-terminal. All stored in memory, for now.
+scrollback-limit = 26214400
+
+theme = "GitHub Dark High Contrast"
