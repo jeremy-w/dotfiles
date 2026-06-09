@@ -19,6 +19,9 @@ setenv HOMEBREW_NO_AUTO_UPDATE 1
 # Silence messages from https://npm.im/opencollective-postinstall
 setenv DISABLE_OPENCOLLECTIVE true
 
+# Point Ripgrep at a config file.
+setenv RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
+
 
 ## PATH MANAGEMENT ##
 # fish_user_paths is automatically prepended to PATH and can be universal.
