@@ -10,9 +10,6 @@ setenv LC_ALL "en_US.UTF-8"
 # Vim shall be our editor.
 setenv EDITOR "/usr/bin/vim"
 
-source ~/.config/fish/fish_git_prompt_colors.fish
-
-
 # Don't interrupt `brew install` with a `brew update`
 setenv HOMEBREW_NO_AUTO_UPDATE 1
 
@@ -22,6 +19,15 @@ setenv DISABLE_OPENCOLLECTIVE true
 # Point Ripgrep at a config file.
 setenv RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
 
+if status --is-interactive
+    source ~/.config/fish/fish_git_prompt_colors.fish
+
+    bind \cc cancel-commandline
+
+    if command -q ngrok
+      eval (ngrok completion)
+    end
+end
 
 ## PATH MANAGEMENT ##
 # fish_user_paths is automatically prepended to PATH and can be universal.
@@ -195,4 +201,4 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-bind \cc cancel-commandline
+
