@@ -9,6 +9,10 @@ Host *
   # See: https://developer.apple.com/library/archive/technotes/tn2449/
   UseKeychain yes
   AddKeysToAgent yes
+  # https://www.openssh.org/pq.html
+  WarnWeakCrypto yes
+  # https://www.1password.dev/ssh/get-started#step-4-configure-your-ssh-or-git-client
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
 Host heroku.com
   PreferredAuthentications publickey
@@ -58,5 +62,3 @@ Host metropolis.local shermans.me
 Host github.pie.apple.com gitlab.corp.apple.com
     IdentityFile ~/.ssh/id_rsa512
 
-Host *
-  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
