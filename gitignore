@@ -1,6 +1,9 @@
 # Finder stuff
 .DS_Store
 
+# Coding assistant local overrides
+AGENTS.override.md
+
 # Xcode per-user config
 *.mode1
 *.mode1v3
@@ -9,6 +12,11 @@
 *.perspectivev3
 *.pbxuser
 xcuserdata/
+
+# Docker Compose local overrides
+# https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/
+docker-compose.override.yml
+compose.override.yml
 
 # Generated files
 build/
@@ -20,8 +28,10 @@ bower_components/
 a.out
 tags
 *.bundle
+*.tsbuildinfo
 
 # Other source repository archive directories (protects when importing)
+.jj
 .hg
 .svn
 CVS
@@ -100,11 +110,11 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-downloads/
+/downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
