@@ -37,8 +37,11 @@
 	excludesfile = ~/.gitignore
 	pager = delta
 [delta]
+	syntax-theme = "Catppuccin Frappe"
+	# Use n and N to jump between files.
 	navigate = true
 	line-numbers = true
+	# Include terminal hyperlinks on line numbers, file names.
 	hyperlinks = true
 	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 [interactive]
