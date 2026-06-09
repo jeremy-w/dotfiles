@@ -181,8 +181,6 @@ end
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 if type -q zoxide
     zoxide init fish | source
