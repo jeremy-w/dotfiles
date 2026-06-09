@@ -2,3 +2,5 @@ hub
 newsbeuter/ttrss-password
 newsbeuter/error.log
 ranger/bookmarks
+pgcli/log
+pgcli/history
