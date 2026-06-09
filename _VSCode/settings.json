@@ -2,7 +2,7 @@
 // See: https://code.visualstudio.com/docs/getstarted/settings
 {
   "breadcrumbs.enabled": true,
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": true,
   "editor.find.autoFindInSelection": "multiline",
   "editor.fontFamily": "'Comic Sans MS', Verdana, 'Go Regular', InputSans, Georgia, proportional",
   "editor.fontSize": 16,
@@ -19,7 +19,7 @@
     "comments": true,
     "strings": true
   },
-  "terminal.integrated.fontFamily": "'monofur for Powerline', 'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'Victor Mono', 'monofur for Powerline', 'Fira Mono for Powerline', 'Fira Code', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 16,
   "js/ts.implicitProjectConfig.checkJs": true,
   // Requires the todo highlight extension:
@@ -172,9 +172,6 @@
   "dart.openDevTools": "flutter",
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
-  "yaml.schemas": {
-    "file:///Users/jeremy/.vscode/extensions/atlassian.atlascode-3.8.8/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
   "atlascode.bitbucket.enabled": false,
   "atlascode.jira.jqlList": [
     {
@@ -385,11 +382,32 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "indentRainbow.lightIndicatorStyleLineWidth": 2,
+  "chat.tools.urls.autoApprove": {
+    "https://*.livekit.io": true,
+    "https://github.com/livekit": true
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "docker.extension.enableComposeLanguageServer": false,
+  "diffEditor.experimental.showMoves": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
   "python.terminal.useEnvFile": true,
+  "git.blame.editorDecoration.enabled": false,
+  "git.enabled": false,
   "python.analysis.typeCheckingMode": "strict",
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "security.promptForLocalFileProtocolHandling": false,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
