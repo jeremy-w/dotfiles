@@ -2,11 +2,11 @@
 # VERSION: 3.0
 SETUVAR --export ANDROID_HOME:/Users/jeremy/Library/Android/sdk
 SETUVAR --export AZURE_CORE_COLLECT_TELEMETRY:0
+SETUVAR --export CASA_TEST_ONE_PREFLIGHT:1
 SETUVAR --export DANGER_GITHUB_API_TOKEN:REDACTED
 SETUVAR Downloads:/Users/jeremy/Library/Mobile\x20Documents/com\x7eapple\x7eCloudDocs/Downloads
-SETUVAR --export GO111MODULE:on
-SETUVAR --export GOROOT:/Users/jeremy/usr/share/go
 SETUVAR --export JAVA_HOME:/Applications/Android\x20Studio\x2eapp/Contents/jbr/Contents/Home
+SETUVAR --export NGROK:https\x3a//unvitrescent\x2ddann\x2dquinoidal\x2engrok\x2dfree\x2edev
 SETUVAR --export OP_SESSION_bignerd_ranch:REDACTED
 SETUVAR --export STABLE_KEY:REDACTED
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
@@ -19,4 +19,5 @@ SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eicezyclon/zoxide\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
+SETUVAR fish_user_paths:/private/tmp/fish\x2da\x1e/private/tmp/fish\x2db\x1e/private/tmp/fish\x2dc\x1e/Users/jeremy/Applications/Postgres\x2eapp/Contents/Versions/18/bin\x1e/Users/jeremy/\x2ecargo/bin\x1e/Users/jeremy/\x2elocal/bin\x1e/Users/jeremy/\x2enimble/bin\x1e/usr/local/share/dotnet\x1e/usr/local/opt/libpq/bin\x1e/Users/jeremy/Library/Python/3\x2e7/bin/
 SETUVAR iCloud:/Users/jeremy/Library/Mobile\x20Documents/com\x7eapple\x7eCloudDocs
