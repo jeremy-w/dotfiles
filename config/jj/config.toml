@@ -1,0 +1,106 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Jeremy W. Sherman"
+email = "jeremyw.sherman@gmail.com"
+
+[aliases]
+# ll: "log long"
+ll = ["log", "-T", "builtin_log_detailed"]
+ed = ["edit"]
+n = ["next"]
+ne = ["next", "-e"]
+p = ["prev"]
+pe = ["prev", "-e"]
+# x: Execute a command in a temporary workspace. Handy for pre-commit.
+# https://github.com/neongreen/mono/tree/main/jj-run
+x = ["util", "exec", "--", "jj-run"]
+# Diff using difftastic.
+difft = ["diff", "--config", "ui.diff-formatter=difft"]
+# Diff using delta.
+delta = ["diff", "--config", "ui.diff-formatter=delta"]
+
+# mine: Show your bookmarks.
+# Via: https://danverbraganza.com/writings/most-frequent-jj-commands
+mine = ["bookmark", "list", "-r", "mine()"]
+
+# TUG: Handy to use before `jj git push`.
+# *** Obsoleted by `jj bookmark advance` in jj v0.39.0 (2026-03-04).
+# Via: https://danverbraganza.com/writings/most-frequent-jj-commands
+# , via: https://github.com/jj-vcs/jj/discussions/2425#discussioncomment-11425112
+# tug: Updates the closest bookmark ancestor to the current revision.
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+# tug-: Updates the closest bookmark ancestor to the previous revision.
+tug- = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+[git]
+# Prevent pushing work in progress or anything explicitly labeled "private"
+private-commits = "description('WIP:*') | description('private:*') | description('*DO_NOT_COMMIT*')"
+sign-on-push = true
+
+# Use with: --config ui.diff-formatter=delta
+[merge-tools.delta]
+program = "delta"
+diff-args = ["$left", "$right"]
+
+[merge-tools.difft]
+program = "difft"
+diff-args = ["--color=always", "$left", "$right"]
+
+[revset-aliases]
+'grep:x' = 'description(regex:x)'
+
+# Find the starts of all my branches not behind b.
+# Use like: jj git fetch && jj rebase -s 'rtarg(staging)' -o staging
+'rtarg(b)' = 'roots(mine() ~ ::b)'
+
+[revsets]
+# Reference:
+# https://github.com/jj-vcs/jj/blob/main/cli/src/config/revsets.toml
+
+# Prioritize the current bookmark
+short-prefixes = "(trunk()..@)::"
+#log = '''
+#  (
+#    coalesce(heads(tracked_remote_bookmarks() & ::@ ~ @), trunk())::@
+#  )
+#  | bookmarks()
+#  | trunk()
+#'''
+
+# Default is @, but I mostly use tug-.
+bookmark-advance-to = "@-"
+
+[signing]
+# Configured alongside git.sign-on-push to reduce constant signature requests.
+# https://docs.jj-vcs.dev/latest/config/#automatically-signing-commits
+behavior = "drop"
+backend = "ssh"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBZPP/147Kek3NgN/52OvJZIuh7mvMrX/3nhUMymWVE"
+## You can also use a path instead of embedding the key
+# key = "~/.ssh/id_for_signing.pub"
+backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+# backends.ssh.allowed-signers = "~/.ssh/allowed_signers"
+
+[snapshot]
+auto-update-stale = true
+
+[templates]
+# Reference:
+# https://github.com/jj-vcs/jj/blob/main/cli/src/config/templates.toml
+
+# src: https://docs.jj-vcs.dev/latest/config/#default-description
+draft_commit_description = '''
+concat(
+  builtin_draft_commit_description,
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
+git_push_bookmark = '"jeremy-w/jj-export-" ++ change_id.short()'
+
+[ui]
+# Just running `jj` now logs. You can also pass flags, e.g. `jj -s`.
+default-command = "log"
+diff-editor = ":builtin"
+conflict-marker-style = "git"

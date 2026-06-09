@@ -1,0 +1,4 @@
+--when.repositories = ["~/git/wintriad/casa"]
+
+[user]
+email = "jeremy.sherman@casacompany.com"
