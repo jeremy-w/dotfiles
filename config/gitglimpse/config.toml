@@ -1,0 +1,7 @@
+default_mode = "template"
+local_llm_url = "http://localhost:11434/v1"
+author_email = "jeremy.sherman@casacompany.com"
+default_since = "yesterday"
+context_mode = "commits"
+group_by = "project"
+filter_noise = true
