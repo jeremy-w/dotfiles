@@ -11,10 +11,10 @@
 #     	path = "~/path/to/root/dir/.gitconfig"
 #
 # This makes setting user.email for a group of checkouts really easy!
-[includeIf "gitdir:~/BNR/**"]
-	path = "~/BNR/.gitconfig"
-[includeIf "gitdir:~/BNR/banno/**"]
-	path = "~/BNR/banno/.gitconfig"
+[includeIf "gitdir:~/git/wintriad/**"]
+	path = "~/git/wintriad/.gitconfig"
+[includeIf "gitdir:~/git/wintriad/casa/**"]
+	path = "~/git/wintriad/casa/.gitconfig"
 [pack]
 	threads = 0
 [diff]
