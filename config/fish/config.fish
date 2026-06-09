@@ -22,6 +22,10 @@ setenv RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
 if status --is-interactive
     source ~/.config/fish/fish_git_prompt_colors.fish
 
+    if command -q atuin
+        atuin init fish --disable-up-arrow | source
+    end
+
     bind \cc cancel-commandline
 
     if command -q ngrok
