@@ -134,37 +134,7 @@ if type -q aws_completer
 end
 
 ## COMMANDS ##
-# autojump adds a `j` command for jumping to a directory.
-# It hooks into directory changes to create a weighted list of directories
-# for use in selecting which directory to jump to.
 if status is-interactive
-    if [ -f /usr/local/share/autojump/autojump.fish ]
-        source /usr/local/share/autojump/autojump.fish
-    end
-
-    # Prevent `--` from turning into an en-dash, while still leaving smart quotes
-    # enabled. <URL:http://mjtsai.com/blog/2016/04/25/outsmarting-the-smart-dash/>
-    if command -q defaults
-        command defaults write -g NSAutomaticDashSubstitutionEnabled 0 >/dev/null 2>/dev/null
-    end
-
-    # tabtab source for serverless package
-    # uninstall by removing these lines or running `tabtab uninstall serverless`
-    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]
-        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish
-    end
-    # tabtab source for sls package
-    # uninstall by removing these lines or running `tabtab uninstall sls`
-    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish ]
-        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish
-    end
-
-    # tabtab source for slss package
-    # uninstall by removing these lines or running `tabtab uninstall slss`
-    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish ]
-        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish
-    end
-
     if type -q zoxide
         zoxide init fish | source
     end
