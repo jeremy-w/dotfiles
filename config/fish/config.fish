@@ -1,25 +1,25 @@
 ## CONFIG ##
 # Tell less to always render color escapes.
-setenv LESS -R
+set -gx LESS -R
 
 # Make sure we have a sane locale.
-setenv LANG "en_US.UTF-8"
-setenv LC_CTYPE "UTF-8"
-setenv LC_ALL "en_US.UTF-8"
+set -gx LANG "en_US.UTF-8"
+set -gx LC_CTYPE "UTF-8"
+set -gx LC_ALL "en_US.UTF-8"
 
 # Vim shall be our editor.
-setenv EDITOR "/usr/bin/vim"
+set -gx EDITOR "/usr/bin/vim"
 
 # Don't interrupt `brew install` with a `brew update`
-setenv HOMEBREW_NO_AUTO_UPDATE 1
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
 
 # Silence messages from https://npm.im/opencollective-postinstall
-setenv DISABLE_OPENCOLLECTIVE true
+set -gx DISABLE_OPENCOLLECTIVE true
 
 # Point Ripgrep at a config file.
-setenv RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
+set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
 
-if status --is-interactive
+if status is-interactive
     source ~/.config/fish/fish_git_prompt_colors.fish
 
     if command -q atuin
@@ -29,65 +29,41 @@ if status --is-interactive
     bind \cc cancel-commandline
 
     if command -q ngrok
-      eval (ngrok completion)
+        eval (ngrok completion)
     end
 end
 
-## PATH MANAGEMENT ##
-# fish_user_paths is automatically prepended to PATH and can be universal.
-# See: https://github.com/fish-shell/fish-shell/issues/527#issuecomment-13315434
-# But `set --append fish_user_paths some/path/here` is your friend.
-#
-# We won't manage it here, since the idea is the user edits it themselves
-# as desired for that specific machine.
-function wants_path -a path
-    set wants_path_verbose 0
-    if test ! -d $path -a $wants_path_verbose -eq 1
-        echo "wants_path: skipped absent directory: $path" >&2
-    end
-    begin
-        not contains "$path" $PATH
-        and test -d "$path"
-    end
-end
-
-# We will, however, feel free to tack stuff we think they missed onto PATH. :)
-#
 # NOTE: ~/.cabal/bin should be pretty empty. Use `cabal sandbox` instead.
 # See: http://coldwa.st/e/blog/2013-08-20-Cabal-sandbox.html
 #
 # More recent cabal/Haskell Platform install to ~/Library/Haskell/bin.
 #
 # Prefix /usr/local/{,s}bin so that Homebrew's stuff takes precedence.
-set -l paths_to_prepend "$HOME/usr/bin" \
-    /opt/homebrew/bin /opt/homebrew/sbin \
+fish_add_path --path \
+    "$HOME/usr/bin" \
+    /opt/homebrew/bin \
+    /opt/homebrew/sbin \
     "$HOME/Library/Haskell/bin" \
-    /usr/local/bin /usr/local/sbin
-# For sanity, ensure we include standard paths.
-set -l paths_to_prepend $paths_to_prepend {/usr,}/bin {/usr,}/sbin /opt/X11/bin
-for path in $paths_to_prepend[-1..1]
-    if wants_path "$path"
-        set -gx PATH "$path" $PATH
-    end
-end
+    /usr/local/bin \
+    /usr/local/sbin \
+    /usr/bin \
+    /usr/sbin \
+    /bin \
+    /sbin \
+    /opt/X11/bin
 
 # Append funky paths where OS X hides things.
 # LaunchServices happens to contain `lsregister`, which can be useful.
 # NOTE: Used to be a /Developer/usr/sbin, but no more as of Xcode 6.3.1.
 # Appending /Developer/usr/bin was messing up xcrun starting with Xcode 7.
-set -l paths_to_append /usr/libexec \
+fish_add_path --path --append \
+    /usr/libexec \
     "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support"
-for path in $paths_to_append
-    if wants_path "$path"
-        set -gx PATH $PATH "$path"
-    end
-end
 
 ### RUBY ###
-# Let rbenv work its PATH magic.
-if type -q rbenv
-    # rbenv since version 1.0 of 2015-12-24 supports fish.
-    status --is-interactive; and source (rbenv init -|psub)
+# rbenv sets up PATH/completions for interactive shells.
+if status is-interactive; and type -q rbenv
+    source (rbenv init -|psub)
 end
 
 ### PYTHON ###
@@ -123,26 +99,20 @@ end
 
 ### PERL ###
 # Could use in future plenv + perl-carton like rbenv + bundler.
-setenv PERL_CPANM_OPT "--local-lib=~/perl5"
+set -gx PERL_CPANM_OPT "--local-lib=~/perl5"
 
 ### GO ###
 if type -q go
-    setenv GOPATH "$HOME/usr/share/go"
-    for godir in "$GOPATH/bin" /usr/local/opt/go/libexec/bin
-        if wants_path "$godir"
-            set PATH $PATH "$godir"
-        end
-    end
+    set -gx GOPATH "$HOME/usr/share/go"
+    fish_add_path --path "$GOPATH/bin" /usr/local/opt/go/libexec/bin
 end
 
 ### SCALA ###
 if type -q scalaenv
     set -l scalaenv_shims "$HOME/.scalaenv/shims"
-    if wants_path $scalaenv_shims
-        set PATH $scalaenv_shims $PATH
-    end
+    fish_add_path --path $scalaenv_shims
 
-    set -x SCALAENV_SHELL fish
+    set -gx SCALAENV_SHELL fish
     scalaenv rehash ^/dev/null
 end
 
@@ -150,9 +120,7 @@ end
 # rust-up actually installs cargo into the directory we're looking for.
 if type -q cargo; or test -x $HOME/.cargo/bin/cargo
     set -l rust_cargo_bin "$HOME/.cargo/bin"
-    if wants_path $rust_cargo_bin
-        set PATH $rust_cargo_bin $PATH
-    end
+    fish_add_path --path $rust_cargo_bin
 end
 
 ## COMPLETIONS ##
@@ -169,40 +137,40 @@ end
 # autojump adds a `j` command for jumping to a directory.
 # It hooks into directory changes to create a weighted list of directories
 # for use in selecting which directory to jump to.
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+if status is-interactive
+    if [ -f /usr/local/share/autojump/autojump.fish ]
+        source /usr/local/share/autojump/autojump.fish
+    end
 
-# OPAM configuration
-# OPAM's variables stuff breaks PATH, which is fun:
-#     PATH=/Users/jeremy/.opam/system/bin:/Users/jeremy/.pyenv/shims /Users/jeremy/.rbenv/shims
-# Note the : alongside the other array bits.
-# It makes this mistake several times over.
-#. /Users/jeremy/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+    # Prevent `--` from turning into an en-dash, while still leaving smart quotes
+    # enabled. <URL:http://mjtsai.com/blog/2016/04/25/outsmarting-the-smart-dash/>
+    if command -q defaults
+        command defaults write -g NSAutomaticDashSubstitutionEnabled 0 >/dev/null 2>/dev/null
+    end
 
+    # tabtab source for serverless package
+    # uninstall by removing these lines or running `tabtab uninstall serverless`
+    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]
+        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish
+    end
+    # tabtab source for sls package
+    # uninstall by removing these lines or running `tabtab uninstall sls`
+    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish ]
+        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish
+    end
 
-## SYSTEM PREFERENCES ##
-# Prevent `--` from turning into an en-dash, while still leaving smart quotes
-# enabled. <URL:http://mjtsai.com/blog/2016/04/25/outsmarting-the-smart-dash/>
-[ -x (which defaults) ]; and defaults write -g NSAutomaticDashSubstitutionEnabled 0
+    # tabtab source for slss package
+    # uninstall by removing these lines or running `tabtab uninstall slss`
+    if [ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish ]
+        source /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish
+    end
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/sls.fish
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/jeremy/dotfiles/config/yarn/global/node_modules/tabtab/.completions/slss.fish
-
-if type -q zoxide
-    zoxide init fish | source
+    if type -q zoxide
+        zoxide init fish | source
+    end
 end
 
 # pnpm
 set -gx PNPM_HOME "/Users/jeremy/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
+fish_add_path --path "$PNPM_HOME"
 # pnpm end
-

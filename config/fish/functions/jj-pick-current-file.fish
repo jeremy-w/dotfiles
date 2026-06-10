@@ -3,7 +3,8 @@ function jj-pick-current-file --description 'Pick a modified file from the revse
     if test -z $revset
         set revset "@"
         # If none in @, then default to @-.
-        if test -z (jj diff --name-only -r $revset)
+        set -l diff_files (jj diff --name-only -r $revset)
+        if not set -q diff_files[1]
             set revset "@-"
         end
     end
