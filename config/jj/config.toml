@@ -53,7 +53,7 @@ diff-args = ["--color=always", "$left", "$right"]
 
 # Find the starts of all my branches not behind b.
 # Use like: jj git fetch && jj rebase -s 'rtarg(staging)' -o staging
-'rtarg(b)' = 'roots(mine() ~ ::b)'
+'rtarg(b)' = 'roots(mine() ~ ::b) & mutable()'
 
 [revsets]
 # Reference:
