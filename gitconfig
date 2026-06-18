@@ -116,3 +116,4 @@
 	prune = true
 	pruneTags = true
 	all = true
+	parallel = 0
