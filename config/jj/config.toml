@@ -19,6 +19,7 @@ x = ["util", "exec", "--", "jj-run"]
 difft = ["diff", "--config", "ui.diff-formatter=difft"]
 # Diff using delta.
 delta = ["diff", "--config", "ui.diff-formatter=delta"]
+slug = ["log", "-T", "slugify(description)", "--no-graph"]
 
 # mine: Show your bookmarks.
 # Via: https://danverbraganza.com/writings/most-frequent-jj-commands
@@ -85,6 +86,21 @@ backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [snapshot]
 auto-update-stale = true
 
+[template-aliases]
+# Via: https://ddbeck.com/notes/jj-git-push-bookmark-template/
+"slugify(str)" = '''
+  truncate_end(
+    65,
+    str.first_line()
+      .replace(regex:'[^[[:alnum:]].]', '-')
+      .replace(regex:'-{2,}', '-')
+      .replace(regex:'\.{2,}', '.')
+      .replace(regex:'(^-+|-+$)', '')
+      .replace(regex:'^(feat|fix|ci|tests|docs)-', '$1/')
+      .lower()
+  )
+'''
+
 [templates]
 # Reference:
 # https://github.com/jj-vcs/jj/blob/main/cli/src/config/templates.toml
@@ -97,7 +113,7 @@ concat(
   diff.git(),
 )
 '''
-git_push_bookmark = '"jeremy-w/jj-export-" ++ change_id.short()'
+git_push_bookmark = 'slugify(description)'
 
 [ui]
 # Just running `jj` now logs. You can also pass flags, e.g. `jj -s`.
