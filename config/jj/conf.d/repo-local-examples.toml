@@ -1,0 +1,9 @@
+## Use `prettier` to fix up files.
+#[fix.tools.prettier]
+#command = ["pnpx", "prettier", "--ignore-unknown", "--stdin-filepath=$path"]
+#patterns = [
+#    "glob:'**/*.tsx'", "glob:'**/*.ts'",
+#    "glob:'**/*.jsx'", "glob:'**/*.js'",
+#    "glob:'**/*.css'", "glob:'**/*.html'",
+#    "glob:'**/*.yml'", "glob:'**/*.yaml'"
+#    ]
