@@ -1,0 +1,9 @@
+[settings.proxy]
+enable = true
+
+[slugs.shop]
+namespace = "0"
+daemon = "plantshop-frontend"
+
+[namespaces.0]
+dir = "/Users/jeremy/git/sells-plants/0"

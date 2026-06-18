@@ -13,6 +13,10 @@ AGENTS.override.md
 *.pbxuser
 xcuserdata/
 
+mise*.local.toml
+mise*.local.lock
+.env*.local
+
 # Docker Compose local overrides
 # https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/
 docker-compose.override.yml
