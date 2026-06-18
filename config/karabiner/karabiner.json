@@ -4,7 +4,91 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "right_option + f -> Messages (friends)",
+                        "description": "right_option + g -> Chat[G]PT",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.chat$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["right_option"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "bundle_identifier": "com.openai.chat" } } }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.chat$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["right_option"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "right_option + x -> Code[X]",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.codex$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["right_option"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "bundle_identifier": "com.openai.codex" } } }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.codex$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["right_option"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "right_option + f -> Messages ([F]riends & [F]amily)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -46,7 +130,7 @@
                         ]
                     },
                     {
-                        "description": "right_option + p -> Music",
+                        "description": "right_option + p -> Music ([P]layer)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -88,7 +172,7 @@
                         ]
                     },
                     {
-                        "description": "right_option + t -> Ghostty (Terminal)",
+                        "description": "right_option + t -> Ghostty ([T]erminal)",
                         "manipulators": [
                             {
                                 "from": {
@@ -101,7 +185,7 @@
                         ]
                     },
                     {
-                        "description": "right_option + s -> Slack",
+                        "description": "right_option + s -> [S]lack",
                         "manipulators": [
                             {
                                 "from": {
@@ -114,7 +198,7 @@
                         ]
                     },
                     {
-                        "description": "right_option + V -> VS code",
+                        "description": "right_option + V -> [V]S code",
                         "manipulators": [
                             {
                                 "from": {
@@ -127,7 +211,7 @@
                         ]
                     },
                     {
-                        "description": "right_option + C -> Chrome",
+                        "description": "right_option + C -> [C]hrome",
                         "manipulators": [
                             {
                                 "from": {
