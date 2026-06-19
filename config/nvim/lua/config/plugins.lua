@@ -1,0 +1,2 @@
+-- In Neovim, prefer lazy.nvim/mini.deps/etc. over pathogen.
+-- This file is left as the place to add plugin-manager setup.
