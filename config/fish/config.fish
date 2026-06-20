@@ -1,6 +1,8 @@
 ## CONFIG ##
 # Tell less to always render color escapes.
-set -gx LESS -R
+# Don't use --mouse; it prevents swipe to copy-paste.
+set -gx LESS --RAW-CONTROL-CHARS --ignore-case --LONG-PROMPT --incsearch
+set -gx BAT_PAGER "less $LESS --quit-if-one-screen"
 
 # Make sure we have a sane locale.
 set -gx LANG "en_US.UTF-8"
