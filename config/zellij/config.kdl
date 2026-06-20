@@ -146,6 +146,14 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
+        bind "t" {
+            LaunchOrFocusPlugin "file:///Users/jeremy/.local/share/zellij/plugins/zellij-choose-tree.wasm" {
+                floating true
+                move_to_focused_tab true
+                show_plugins false
+            }
+            SwitchToMode "normal"
+        }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
                 floating true
