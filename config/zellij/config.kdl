@@ -45,16 +45,17 @@ keybinds clear-defaults=true {
         bind "[" { BreakPaneLeft; SwitchToMode "normal"; }
         bind "]" { BreakPaneRight; SwitchToMode "normal"; }
         bind "b" { BreakPane; SwitchToMode "normal"; }
-        bind "h" { GoToPreviousTab; }
+        bind "h" { SwitchToMode "normal"; }
         bind "j" { GoToNextTab; }
         bind "k" { GoToPreviousTab; }
-        bind "l" { GoToNextTab; }
+        bind "l" { ToggleTab; }
         bind "n" { NewTab; SwitchToMode "normal"; }
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
         bind "Ctrl t" { SwitchToMode "normal"; }
+        bind "t" { GoToNextTab; }
         bind "x" { CloseTab; SwitchToMode "normal"; }
-        bind "tab" { ToggleTab; }
+        bind "tab" { ToggleTab; SwitchToMode "normal"; }
     }
     resize {
         bind "left" { Resize "Increase left"; }
