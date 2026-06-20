@@ -430,5 +430,8 @@
   "accessibility.verbosity.terminal": false,
   "accessibility.verbosity.sourceControl": false,
   "accessibility.verbosity.sessionsChat": false,
-  "accessibility.verbosity.replEditor": false
+  "accessibility.verbosity.replEditor": false,
+  "ruff.format.backend": "uv",
+  "ruff.configurationPreference": "filesystemFirst",
+  "js/ts.updateImportsOnFileMove.enabled": "always"
 }
