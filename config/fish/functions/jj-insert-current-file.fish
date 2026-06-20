@@ -14,7 +14,7 @@ function jj-insert-current-file --description 'Insert a modified file from curre
         | fzf \
             --prompt="file> " \
             --header="Insert file path from $revset" \
-            --preview "jj diff -r $revset -- '{}'" \
+            --preview "jj diff --color=always -r $revset -- '\"{r}\"'" \
             --preview-window=right:70%
     )
 

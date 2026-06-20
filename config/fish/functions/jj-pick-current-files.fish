@@ -14,7 +14,7 @@ function jj-pick-current-files --description 'Insert modified files from current
         | fzf --multi \
             --prompt="files> " \
             --header="Insert files from $revset" \
-            --preview "jj diff -r $revset -- '{}'" \
+            --preview "jj diff --color=always -r $revset -- '\"{r}\"'" \
             --preview-window=right:70%
     )
     echo $files
