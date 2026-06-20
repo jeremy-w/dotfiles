@@ -17,8 +17,7 @@ function casa-prek
     end
     echo "Scanning files changed since:"
     echo $commit
-    string join "
-- " '' $files
+    echo -e (string join "\n- " '' $files)
     echo
     SKIP=alembic-check .venv/bin/pre-commit run --file $files
 end
