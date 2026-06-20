@@ -7,3 +7,9 @@ pgcli/history
 zellij/config.kdl.bak
 jj/repos/
 medusa/events.json
+
+# Placed in fnox/age.txt per setup instructions, but secret.
+age.txt
+
+# Really a local state / cache file.
+op/config
