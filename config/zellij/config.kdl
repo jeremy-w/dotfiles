@@ -176,6 +176,11 @@ keybinds clear-defaults=true {
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Ctrl q" { Quit; }
+        bind "Alt x" {
+            LaunchOrFocusPlugin "file:///Users/jeremy/.local/share/zellij/plugins/zextract.wasm" {
+                floating true
+            }
+        }
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
