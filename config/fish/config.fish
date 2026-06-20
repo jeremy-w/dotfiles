@@ -12,6 +12,9 @@ set -gx EDITOR "/opt/homebrew/bin/nvim"
 
 # Don't interrupt `brew install` with a `brew update`
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
+# https://stout.neullabs.com/articles/homebrew-uses-too-much-disk-space/
+set -gx HOMEBREW_CLEANUP_MAX_AGE_DAYS 14
+set -gx HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS 7
 
 # Silence messages from https://npm.im/opencollective-postinstall
 set -gx DISABLE_OPENCOLLECTIVE true
