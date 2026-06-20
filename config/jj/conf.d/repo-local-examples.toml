@@ -1,9 +1,10 @@
-## Use `prettier` to fix up files.
+## Use repo-local `prettier` to fix up files.
 #[fix.tools.prettier]
-#command = ["pnpx", "prettier", "--ignore-unknown", "--stdin-filepath=$path"]
+#command = ["corepack", "pnpm", "exec", "prettier", "--ignore-unknown", "--stdin-filepath=$path"]
 #patterns = [
 #    "glob:'**/*.tsx'", "glob:'**/*.ts'",
-#    "glob:'**/*.jsx'", "glob:'**/*.js'",
+#    "glob:'**/*.jsx'", "glob:'**/*.mjs'", "glob:'**/*.js'",
+#    "glob:'**/*.mts'", "glob:'**/*.cts'",
 #    "glob:'**/*.css'", "glob:'**/*.html'",
 #    "glob:'**/*.yml'", "glob:'**/*.yaml'"
 #    ]
