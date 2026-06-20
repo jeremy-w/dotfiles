@@ -120,3 +120,7 @@ end
 set -gx PNPM_HOME "/Users/jeremy/Library/pnpm"
 fish_add_path --path "$PNPM_HOME"
 # pnpm end
+
+if [ -f ~/.config/fnox/age.txt ]
+    set -gx FNOX_AGE_KEY (grep AGE-SECRET-KEY ~/.config/fnox/age.txt)
+end
