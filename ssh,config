@@ -49,6 +49,7 @@ Host dev1.alchiba.bnr
 
 Host 167.99.144.78 gateway-arch jeremywsherman.com 159.223.112.165
     IdentityFile ~/.ssh/id_rsa512
+    SetEnv LC_CTYPE=en_US.UTF-8
 
 # shermans.me NAS
 Host metropolis.local shermans.me
