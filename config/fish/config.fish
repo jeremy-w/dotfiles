@@ -11,6 +11,7 @@ set -gx LC_ALL "en_US.UTF-8"
 
 # Neovim shall be our editor.
 set -gx EDITOR "/opt/homebrew/bin/nvim"
+abbr --add vi nvim
 
 # Don't interrupt `brew install` with a `brew update`
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
