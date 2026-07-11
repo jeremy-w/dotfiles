@@ -1,3 +1,7 @@
+[settings.logs]
+time_retention = "7d"
+line_retention = 10_000
+
 [settings.proxy]
 enable = true
 
