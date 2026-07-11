@@ -7,6 +7,16 @@ function __pitchfork_daemons
     pitchfork list --hide-header | cut -d' ' -f1
 end
 
+function __unseen_pitchfork_daemons
+    set -l existing (commandline -opc | tail -n +2)
+    for daemon in (__pitchfork_daemons)
+        if not contains -- $daemon $existing
+            echo $daemon
+        end
+    end
+end
+
+
 # if "usage" is not installed show an error
 if ! type -p usage &> /dev/null
     echo >&2
@@ -27,4 +37,4 @@ end
 
 complete --command pitchfork \
     --condition "__fish_seen_subcommand_from $daemon_commands" \
-    --no-files --arguments "(__pitchfork_daemons)"
+    --no-files --arguments "(__unseen_pitchfork_daemons)"
