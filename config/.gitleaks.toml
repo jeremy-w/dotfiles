@@ -1,0 +1,11 @@
+# gitleaks git --no-color --no-banner --log-opts="--branches --tags --remotes" -v .
+title = "Dotfiles Gitleaks config"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Ignore Jujutsu conflicts"
+paths = [
+  '''^\.jjconflict.*''',
+]
