@@ -1,0 +1,14 @@
+# This is config that should be enabled on a repo-local basis.
+# To enable, override enabled to true within the repo config.
+
+# Use repo-local `prettier` to fix up files.
+[fix.tools.prettier]
+enabled = false
+command = ["corepack", "pnpm", "exec", "prettier", "--ignore-unknown", "--stdin-filepath=$path"]
+patterns = [
+    "glob:'**/*.tsx'", "glob:'**/*.ts'",
+    "glob:'**/*.jsx'", "glob:'**/*.mjs'", "glob:'**/*.js'",
+    "glob:'**/*.mts'", "glob:'**/*.cts'",
+    "glob:'**/*.css'", "glob:'**/*.html'",
+    "glob:'**/*.yml'", "glob:'**/*.yaml'"
+    ]
