@@ -1,9 +1,16 @@
 # Configuration file - shared by bash and zsh,
 # read by all interactive shells.
 PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
+PG_PATH="$HOME/Applications/Postgres.app/Contents/Versions/latest/bin/"
+if [ -d "$PG_PATH" ]; then
+  PATH="$PG_PATH:$PATH"
+fi
+
 export PATH="$HOME/usr/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/libexec:/Developer/usr/bin:/Developer/usr/sbin"
 export MONO_PATH="/Library/Frameworks/Mono.framework/Commands"
 export NODE_PATH="/usr/local/lib/node_modules"
+
 has () {
   which "$1" 2>&1 >/dev/null
 }
@@ -26,8 +33,6 @@ alias mq='hg -R $(hg root)/.hg/patches'
 if has hub; then
   eval "$(hub alias -s)"
 fi
-alias sr='git svn rebase'
-alias sd='git svn dcommit'
 
 alias lsregister='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister'
 alias xmlcat="sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g'"
@@ -87,8 +92,6 @@ yosemite_reset_dialog_height() {
         defaults delete -app "$1" "$k"
     done
 }
-
-export IRTRANS_ROOT="$HOME/Clark/Urbi/irtrans/src/urbi"
 
 export LANG="en_US.UTF-8" LC_CTYPE="UTF-8"
 export EDITOR="/usr/bin/vim"
