@@ -37,13 +37,19 @@ tug- = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 [git]
 # Prevent pushing work in progress or anything explicitly labeled "private"
 private-commits = "description('WIP:*') | description('private:*') | description('*DO_NOT_COMMIT*')"
+# Wait to sign till push, so we get one key access request for the whole batch.
 sign-on-push = true
+# Don't create a local bookmark for the remote default branch. Usually push is
+# disabled anyway, and it just gives one more thing that can get out of sync
+# with upstream.
+auto-local-bookmark = false
 
 # Use with: --config ui.diff-formatter=delta
 [merge-tools.delta]
 program = "delta"
 diff-args = ["$left", "$right"]
 
+# Use with: --config ui.diff-formatter=difft
 [merge-tools.difft]
 program = "difft"
 diff-args = ["--color=always", "$left", "$right"]
