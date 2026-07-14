@@ -7,11 +7,11 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBZPP/147Kek3NgN/52OvJZIuh7mvMrX/3nhUMymWVE
 # Shared .gitconfig example:
 #
-#     [includeIf "gitdir:~/path/to/root/dir/**"]
+#     [includeIf "gitdir:~/path/to/root/dir/"]
 #     	path = "~/path/to/root/dir/.gitconfig"
 #
 # This makes setting user.email for a group of checkouts really easy!
-[includeIf "gitdir:~/git/wintriad/**"]
+[includeIf "gitdir:~/git/wintriad/"]
 	path = "~/git/wintriad/.gitconfig"
 [includeIf "gitdir:~/git/wintriad/casa/**"]
 	path = "~/git/wintriad/casa/.gitconfig"
