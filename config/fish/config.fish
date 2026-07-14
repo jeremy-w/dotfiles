@@ -6,11 +6,11 @@ set -gx BAT_PAGER "less $LESS --quit-if-one-screen"
 
 # Make sure we have a sane locale.
 set -gx LANG "en_US.UTF-8"
-set -gx LC_CTYPE "UTF-8"
+set -gx LC_CTYPE UTF-8
 set -gx LC_ALL "en_US.UTF-8"
 
 # Neovim shall be our editor.
-set -gx EDITOR "/opt/homebrew/bin/nvim"
+set -gx EDITOR /opt/homebrew/bin/nvim
 abbr --add vi nvim
 
 # Don't interrupt `brew install` with a `brew update`
@@ -33,6 +33,11 @@ if status is-interactive
     end
 
     bind \cc cancel-commandline
+
+    # Enable resuming the first backgrounded process via C-z.
+    # This lets you toggle the same process in and out of foreground.
+    # via: https://github.com/helix-editor/helix/wiki/Recipes#fish 
+    bind \cz 'fg 2>/dev/null; commandline -f repaint'
 
     if command -q ngrok
         eval (ngrok completion)
@@ -120,7 +125,7 @@ if status is-interactive
 end
 
 # pnpm
-set -gx PNPM_HOME "/Users/jeremy/Library/pnpm"
+set -gx PNPM_HOME /Users/jeremy/Library/pnpm
 fish_add_path --path "$PNPM_HOME"
 # pnpm end
 
