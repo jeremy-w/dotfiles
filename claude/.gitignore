@@ -1,0 +1,27 @@
+# Runtime/session state
+history.jsonl
+projects/
+todos/
+file-history/
+.last-cleanup
+plans/
+
+# Caches
+cache/
+debug/
+skills/synced/
+plugins/synced/
+plugins/marketplaces/
+plugins/.last_inuse_sweep
+
+# Machine-local state
+statsig/
+shell-snapshots/
+
+# Claude-managed config
+policy-limits*
+remote-settings.json
+
+# Backups/temp files
+backups/
+*.tmp

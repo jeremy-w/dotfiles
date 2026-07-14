@@ -1,0 +1,57 @@
+{
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@mattpocock": true
+  },
+  "extraKnownMarketplaces": {
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
+    }
+  },
+  "theme": "dark",
+  "pluginConfigs": {
+    "agents-md@builtin": {
+      "options": { "instructionFiles": "claude-md-and-agents-md" }
+    }
+  }
+}

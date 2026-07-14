@@ -1,0 +1,18 @@
+{
+  "mattpocock": {
+    "source": {
+      "source": "github",
+      "repo": "mattpocock/skills"
+    },
+    "installLocation": "/Users/jeremy/.claude/plugins/marketplaces/mattpocock",
+    "lastUpdated": "2026-09-23T15:59:51.848Z"
+  },
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/jeremy/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-09-21T14:43:57.807Z"
+  }
+}
