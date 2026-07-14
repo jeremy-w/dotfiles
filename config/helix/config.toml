@@ -10,6 +10,9 @@ trim-final-newlines = true
 jump-label-alphabet = "ntesiroabcdfghjklmpquvwxyz"
 rulers = [73, 81, 121]
 
+[editor.soft-wrap]
+enable = true
+
 [editor.whitespace]
 render = "all"
 
