@@ -1,0 +1,374 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-03-11T18:10:43.470Z",
+      "updatedAt": "2026-03-11T18:10:43.470Z"
+    },
+    "cavecrew": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/cavecrew/SKILL.md",
+      "skillFolderHash": "58b9a0bdb00d97953bfc840cb4dc3b38faf03759",
+      "installedAt": "2026-09-21T14:45:46.048Z",
+      "updatedAt": "2026-09-21T14:45:46.048Z"
+    },
+    "caveman": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman/SKILL.md",
+      "skillFolderHash": "2d9a159619205a175577d6540b1ed64fd73d83b1",
+      "installedAt": "2026-09-21T14:45:46.050Z",
+      "updatedAt": "2026-09-21T14:45:46.050Z"
+    },
+    "caveman-commit": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-commit/SKILL.md",
+      "skillFolderHash": "7b600195c1d3cdd277dc608c56384c86afb7ec11",
+      "installedAt": "2026-09-21T14:45:46.051Z",
+      "updatedAt": "2026-09-21T14:45:46.051Z"
+    },
+    "caveman-compress": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-compress/SKILL.md",
+      "skillFolderHash": "21aa5ecc4fdf9667604102c6ec723030ec4f4b9c",
+      "installedAt": "2026-09-21T14:45:46.051Z",
+      "updatedAt": "2026-09-21T14:45:46.051Z"
+    },
+    "caveman-discover": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-discover/SKILL.md",
+      "skillFolderHash": "d43d2ff7268e8df5db2198977b79b765b723b9d9",
+      "installedAt": "2026-09-21T14:45:46.052Z",
+      "updatedAt": "2026-09-21T14:45:46.052Z"
+    },
+    "caveman-evidence-review": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-evidence-review/SKILL.md",
+      "skillFolderHash": "50875bf7d4a1ce7a64d92cc4127b3c63c2e0701a",
+      "installedAt": "2026-09-21T14:45:46.052Z",
+      "updatedAt": "2026-09-21T14:45:46.052Z"
+    },
+    "caveman-explore": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-explore/SKILL.md",
+      "skillFolderHash": "f26926e617ca8108e7ab77a9f6e100c228888ffe",
+      "installedAt": "2026-09-21T14:45:46.053Z",
+      "updatedAt": "2026-09-21T14:45:46.053Z"
+    },
+    "caveman-help": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-help/SKILL.md",
+      "skillFolderHash": "7f39fe20663ec4d859cfed3883927a79a4ed2eff",
+      "installedAt": "2026-09-21T14:45:46.053Z",
+      "updatedAt": "2026-09-21T14:45:46.053Z"
+    },
+    "caveman-learn": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-learn/SKILL.md",
+      "skillFolderHash": "908fae7ced871b3505fecc7c7d294d5f9dd39ca8",
+      "installedAt": "2026-09-21T14:45:46.054Z",
+      "updatedAt": "2026-09-21T14:45:46.054Z"
+    },
+    "caveman-manage": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-manage/SKILL.md",
+      "skillFolderHash": "0a94a5cc3a4fd218b07d8853e4065e9a513fe51f",
+      "installedAt": "2026-09-21T14:45:46.054Z",
+      "updatedAt": "2026-09-21T14:45:46.054Z"
+    },
+    "caveman-optimize": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-optimize/SKILL.md",
+      "skillFolderHash": "3311c453a59a8a27ad0555949e24fea81daf77fa",
+      "installedAt": "2026-09-21T14:45:46.055Z",
+      "updatedAt": "2026-09-21T14:45:46.055Z"
+    },
+    "caveman-review": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-review/SKILL.md",
+      "skillFolderHash": "515d07fbd383fb9a15ad94647d133f681dc56197",
+      "installedAt": "2026-09-21T14:45:46.055Z",
+      "updatedAt": "2026-09-21T14:45:46.055Z"
+    },
+    "caveman-setup": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-setup/SKILL.md",
+      "skillFolderHash": "be2dfccebf403aa38e16bb39e367a3f045e24b07",
+      "installedAt": "2026-09-21T14:45:46.056Z",
+      "updatedAt": "2026-09-21T14:45:46.056Z"
+    },
+    "caveman-stats": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman-stats/SKILL.md",
+      "skillFolderHash": "a2e477b9de0ebf214b86f11dffdd2a0122e1fc1f",
+      "installedAt": "2026-09-21T14:45:46.056Z",
+      "updatedAt": "2026-09-21T14:45:46.056Z"
+    },
+    "investigate-first": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/investigate-first/SKILL.md",
+      "skillFolderHash": "c20174862b4748fc26ce55192a8431e9ef662947",
+      "installedAt": "2026-09-21T14:45:46.057Z",
+      "updatedAt": "2026-09-21T14:45:46.057Z"
+    },
+    "lean-build": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/lean-build/SKILL.md",
+      "skillFolderHash": "47bc09c3509d7f58f0f890836ab7f382987fd487",
+      "installedAt": "2026-09-21T14:45:46.057Z",
+      "updatedAt": "2026-09-21T14:45:46.057Z"
+    },
+    "migration": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/migration/SKILL.md",
+      "skillFolderHash": "b1066e51b4e7cb9a943554a98c3810653ccff059",
+      "installedAt": "2026-09-21T14:45:46.057Z",
+      "updatedAt": "2026-09-21T14:45:46.057Z"
+    },
+    "safe-refactor": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/safe-refactor/SKILL.md",
+      "skillFolderHash": "49fd11fcfa4fd63ab175380ed8f80b992090e5e4",
+      "installedAt": "2026-09-21T14:45:46.058Z",
+      "updatedAt": "2026-09-21T14:45:46.058Z"
+    },
+    "surgical-patch": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/surgical-patch/SKILL.md",
+      "skillFolderHash": "f7316a9431eff84811b6fd100af70e6984751c91",
+      "installedAt": "2026-09-21T14:45:46.058Z",
+      "updatedAt": "2026-09-21T14:45:46.058Z"
+    },
+    "verify-and-stop": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/verify-and-stop/SKILL.md",
+      "skillFolderHash": "daaaceac55b83384dc3685c3b946699b9bc29331",
+      "installedAt": "2026-09-21T14:45:46.059Z",
+      "updatedAt": "2026-09-21T14:45:46.059Z"
+    },
+    "brooks-audit": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-audit/SKILL.md",
+      "skillFolderHash": "3635a43a64e71388900f4323e5b10d12a9a3a430",
+      "installedAt": "2026-09-21T14:46:11.533Z",
+      "updatedAt": "2026-09-21T14:46:11.533Z"
+    },
+    "brooks-debt": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-debt/SKILL.md",
+      "skillFolderHash": "b60646fecf306517c126f9aad2b875aa7f2e10cd",
+      "installedAt": "2026-09-21T14:46:11.536Z",
+      "updatedAt": "2026-09-21T14:46:11.536Z"
+    },
+    "brooks-harness": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": ".claude/skills/brooks-harness/SKILL.md",
+      "skillFolderHash": "d82b44a321f3900c846b4d1641f77270a9dacea4",
+      "installedAt": "2026-09-21T14:46:11.538Z",
+      "updatedAt": "2026-09-21T14:46:11.538Z"
+    },
+    "brooks-health": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-health/SKILL.md",
+      "skillFolderHash": "042f51b371a20b440f0ba32e0bb9bdf95b1911d7",
+      "installedAt": "2026-09-21T14:46:11.538Z",
+      "updatedAt": "2026-09-21T14:46:11.538Z"
+    },
+    "brooks-review": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-review/SKILL.md",
+      "skillFolderHash": "7f90d7ac5a1e49fb2e8842ef4c181532217ad262",
+      "installedAt": "2026-09-21T14:46:11.539Z",
+      "updatedAt": "2026-09-21T14:46:11.539Z"
+    },
+    "brooks-sweep": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-sweep/SKILL.md",
+      "skillFolderHash": "0b5593040009ee4ecbff038bad484861c70fef85",
+      "installedAt": "2026-09-21T14:46:11.540Z",
+      "updatedAt": "2026-09-21T14:46:11.540Z"
+    },
+    "brooks-test": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": "skills/brooks-test/SKILL.md",
+      "skillFolderHash": "2b192fd2b994ec8f49ecc792b5fc91a6194fd465",
+      "installedAt": "2026-09-21T14:46:11.541Z",
+      "updatedAt": "2026-09-21T14:46:11.541Z"
+    },
+    "new-skill": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": ".claude/skills/new-skill/SKILL.md",
+      "skillFolderHash": "3e8a399cb194fa8545a9d3329336124ece0438d2",
+      "installedAt": "2026-09-21T14:46:11.541Z",
+      "updatedAt": "2026-09-21T14:46:34.392Z"
+    },
+    "release": {
+      "source": "hyhmrright/brooks-lint",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/brooks-lint.git",
+      "skillPath": ".claude/skills/release/SKILL.md",
+      "skillFolderHash": "9b05d0d1f496748ae6cb08758256bdf382cff3ad",
+      "installedAt": "2026-09-21T14:46:11.542Z",
+      "updatedAt": "2026-09-21T14:46:11.542Z"
+    },
+    "bump-version": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": ".claude/skills/bump-version/SKILL.md",
+      "skillFolderHash": "28a77edad913f45d03f10df930dd6e47045cd450",
+      "installedAt": "2026-09-21T14:46:34.384Z",
+      "updatedAt": "2026-09-21T14:46:34.384Z"
+    },
+    "logic-diff": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-diff/SKILL.md",
+      "skillFolderHash": "80da8fca119e5e51abaa2777a0d5ab412a21d66a",
+      "installedAt": "2026-09-21T14:46:34.387Z",
+      "updatedAt": "2026-09-21T14:46:34.387Z"
+    },
+    "logic-explain": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-explain/SKILL.md",
+      "skillFolderHash": "4e1577c3a495c4d47686d04c6ae7bd19df332f05",
+      "installedAt": "2026-09-21T14:46:34.388Z",
+      "updatedAt": "2026-09-21T14:46:34.388Z"
+    },
+    "logic-fix-all": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-fix-all/SKILL.md",
+      "skillFolderHash": "c9ec58a7f1336ee1d482ca975539ebe010dc831b",
+      "installedAt": "2026-09-21T14:46:34.389Z",
+      "updatedAt": "2026-09-21T14:46:34.389Z"
+    },
+    "logic-health": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-health/SKILL.md",
+      "skillFolderHash": "de682f2a65fd63a84bd9156d3360cac08f6b1146",
+      "installedAt": "2026-09-21T14:46:34.390Z",
+      "updatedAt": "2026-09-21T14:46:34.390Z"
+    },
+    "logic-locate": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-locate/SKILL.md",
+      "skillFolderHash": "05dfae85b210184f205f0133005f25edc3974122",
+      "installedAt": "2026-09-21T14:46:34.391Z",
+      "updatedAt": "2026-09-21T14:46:34.391Z"
+    },
+    "logic-review": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": "skills/logic-review/SKILL.md",
+      "skillFolderHash": "c759dbfc9e955f74ec805a973ef6537313eeaff2",
+      "installedAt": "2026-09-21T14:46:34.392Z",
+      "updatedAt": "2026-09-21T14:46:34.392Z"
+    },
+    "run-iteration-eval": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": ".claude/skills/run-iteration-eval/SKILL.md",
+      "skillFolderHash": "15f1676e8f6fd8f09e68d524e347396e79b43983",
+      "installedAt": "2026-09-21T14:46:34.393Z",
+      "updatedAt": "2026-09-21T14:46:34.393Z"
+    },
+    "sync-skill-cache": {
+      "source": "hyhmrright/logic-lens",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyhmrright/logic-lens.git",
+      "skillPath": ".claude/skills/sync-skill-cache/SKILL.md",
+      "skillFolderHash": "b066f940e1b9f41a79c50090e9cb4c9bc7315ed2",
+      "installedAt": "2026-09-21T14:46:34.393Z",
+      "updatedAt": "2026-09-21T14:46:34.393Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
