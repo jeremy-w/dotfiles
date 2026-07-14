@@ -1,0 +1,15 @@
+# This has unfortunate issues with the text under the cursor not being visible
+# aside from the primary cursor.
+#theme = "default-with-primary"
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+tab = "⇶"
+tabpad = "·"
+# A symbol per space was too distracting.
+# I really just want to see trailing space.
+#space = "⊔"
+space = " "
+newline = "⤶"
