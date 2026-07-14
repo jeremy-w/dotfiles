@@ -21,6 +21,7 @@ set -gx HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS 7
 
 # Silence messages from https://npm.im/opencollective-postinstall
 set -gx DISABLE_OPENCOLLECTIVE true
+set -gx MEDUSA_DISABLE_TELEMETRY true
 
 # Point Ripgrep at a config file.
 set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
