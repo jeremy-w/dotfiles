@@ -1,3 +1,7 @@
+# Automatically continue a Markdown list on newline.
+# Unfortunately does not fix indentation of hard-wrapped lines, nor
+# does it automatically continue if the line doesn't begin with that
+# character.
 [[language]]
 name = "markdown"
-comment-tokens = ["-", "+", "*", ">", "- [ ]"]
+comment-tokens = ["-", "+", "*", "1.", ">", "- [ ]"]
