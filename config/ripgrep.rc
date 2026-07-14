@@ -1,1 +1,3 @@
 --hyperlink-format=vscode
+# smart-case: override with -s/--case-sensitive if strictly searching lowercase
+--smart-case
