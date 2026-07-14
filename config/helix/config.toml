@@ -2,6 +2,14 @@
 # aside from the primary cursor.
 #theme = "default-with-primary"
 
+[editor]
+line-number = "relative"
+trim-trailing-whitespace = true
+trim-final-newlines = true
+# Colemak homerow, alternating hands starting with the one opposite w, middle out, then the rest of the alphabet.
+jump-label-alphabet = "ntesiroabcdfghjklmpquvwxyz"
+rulers = [73, 81, 121]
+
 [editor.whitespace]
 render = "all"
 
