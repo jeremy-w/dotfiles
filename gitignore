@@ -3,6 +3,7 @@
 
 # Coding assistant local overrides
 AGENTS.override.md
+CLAUDE.local.md
 
 # Xcode per-user config
 *.mode1
