@@ -98,6 +98,11 @@ if type -q go
     fish_add_path --path "$GOPATH/bin" /usr/local/opt/go/libexec/bin
 end
 
+### GCLOUD ###
+if type -q gcloud
+    fish_add_path --path --append (gcloud info --format='value(config.paths.sdk_root)')/bin
+end
+
 ### SCALA ###
 if type -q scalaenv
     set -l scalaenv_shims "$HOME/.scalaenv/shims"
