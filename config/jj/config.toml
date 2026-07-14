@@ -42,7 +42,8 @@ sign-on-push = true
 # Don't create a local bookmark for the remote default branch. Usually push is
 # disabled anyway, and it just gives one more thing that can get out of sync
 # with upstream.
-auto-local-bookmark = false
+# https://docs.jj-vcs.dev/latest/config/#automatic-local-bookmark-creation-on-jj-git-clone
+track-default-bookmark-on-clone = false
 
 # Use with: --config ui.diff-formatter=delta
 [merge-tools.delta]
