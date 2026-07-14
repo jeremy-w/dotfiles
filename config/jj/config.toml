@@ -90,9 +90,9 @@ auto-update-stale = true
 # Via: https://ddbeck.com/notes/jj-git-push-bookmark-template/
 "slugify(str)" = '''
   truncate_end(
-    65,
+    72,
     str.first_line()
-      .replace(regex:'[^[[:alnum:]].]', '-')
+      .replace(regex:'[^[[:alnum:]]]', '-')
       .replace(regex:'-{2,}', '-')
       .replace(regex:'\.{2,}', '.')
       .replace(regex:'(^-+|-+$)', '')
