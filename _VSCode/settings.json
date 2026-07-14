@@ -435,4 +435,7 @@
   "ruff.configurationPreference": "filesystemFirst",
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "yaml.disableSchemaDetection": []
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
+  "search.experimental.useIgnoreFilesInFindFiles": true
 }
