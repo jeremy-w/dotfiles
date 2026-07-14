@@ -1,6 +1,7 @@
 # Runtime/session state
 history.jsonl
 projects/
+sessions/
 todos/
 file-history/
 .last-cleanup
