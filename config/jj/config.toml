@@ -102,6 +102,41 @@ auto-update-stale = true
 '''
 description_placeholder = '"[]"'
 
+# Override builtin_log_detailed to list parent change IDs.
+"builtin_log_detailed(commit)" = '''
+concat(
+  "Commit ID: " ++ commit.commit_id() ++ "\n",
+  "Change ID: " ++ commit.change_id() ++ "\n",
+  if(
+    commit.parents().len() > 1,
+    "Merge    : " ++ commit.parents().map(|p| p.change_id()).join(" ") ++ "\n",
+    "",
+  ),
+  surround("Bookmarks: ", "\n", separate(" ",
+    commit.local_bookmarks(),
+    commit.remote_bookmarks(),
+  )),
+  surround("Tags     : ", "\n", commit.tags()),
+  "Author   : " ++ format_detailed_signature(commit.author()) ++ "\n",
+  "Committer: " ++ format_detailed_signature(commit.committer())  ++ "\n",
+  if(config("ui.show-cryptographic-signatures").as_boolean(),
+    concat(
+      "Signature: ",
+      format_detailed_cryptographic_signature(commit.signature()),
+      "\n",
+    )
+  ),
+  "\n",
+  indent("    ",
+    if(commit.description(),
+      commit.description().trim_end(),
+      label(if(commit.empty(), "empty"), description_placeholder)
+    ) ++ "\n"
+  ),
+  "\n",
+)
+'''
+
 [templates]
 # Reference:
 # https://github.com/jj-vcs/jj/blob/main/cli/src/config/templates.toml
