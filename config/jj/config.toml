@@ -96,7 +96,7 @@ auto-update-stale = true
       .replace(regex:'-{2,}', '-')
       .replace(regex:'\.{2,}', '.')
       .replace(regex:'(^-+|-+$)', '')
-      .replace(regex:'^(feat|fix|ci|tests|docs)-', '$1/')
+      .replace(regex:'^(feat|fix|ci|tests|docs|migration|dev|deps)-', '$1/')
       .lower()
   )
 '''
