@@ -131,13 +131,6 @@ if status is-interactive
     end
 end
 
-# pnpm
-set -gx PNPM_HOME /Users/jeremy/Library/pnpm
-# Keep the standalone pnpm install available without letting it shadow mise's
-# toolset when mise has selected a pnpm/corepack version.
-fish_add_path --path --append "$PNPM_HOME"
-# pnpm end
-
 if [ -f ~/.config/fnox/age.txt ]
     set -gx FNOX_AGE_KEY (grep AGE-SECRET-KEY ~/.config/fnox/age.txt)
 end
