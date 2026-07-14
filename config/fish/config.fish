@@ -23,6 +23,12 @@ set -gx HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS 7
 set -gx DISABLE_OPENCOLLECTIVE true
 set -gx MEDUSA_DISABLE_TELEMETRY true
 
+# Node: Don't make me try to repro to get relevant info.
+# * --trace-uncaught adds a stack trace of where the `throw` came from, vs the
+#   construction-time stacktrace Error captures. Also covers throwing non-errors.
+# * If --trace-warnings is too noisy, can back it down to --trace-deprecation.
+set -gx NODE_OPTIONS --enable-source-maps --trace-uncaught --trace-warnings
+
 # Point Ripgrep at a config file.
 set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgrep.rc
 
