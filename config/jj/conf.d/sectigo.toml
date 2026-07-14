@@ -1,0 +1,4 @@
+--when.repositories = ["~/git/wintriad/sectigo"]
+
+[user]
+email = "jeremy.sherman@sectigo.com"
